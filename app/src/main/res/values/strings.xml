@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LearningProject</string>
+    <string name="java_call_js">javascript:callJs(\"%1$s\");</string>
 </resources>

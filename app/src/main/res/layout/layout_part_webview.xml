@@ -7,10 +7,10 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/webview_button"
+        android:id="@+id/simple_webview_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="webview"/>
+        android:text="简单native与js互调"/>
 
 </LinearLayout>

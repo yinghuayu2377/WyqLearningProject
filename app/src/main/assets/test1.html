@@ -1,0 +1,12 @@
+<html>
+<script type="text/javascript">
+    function callNative() {
+        window.bridge.helloNative("js调用Java成功!");
+    }
+
+    function callJs(parameter) {
+        alert(parameter + "java调用js成功!");
+    }
+</script>
+<button onclick="javascript:callNative();">js调用java</button>
+</html>
