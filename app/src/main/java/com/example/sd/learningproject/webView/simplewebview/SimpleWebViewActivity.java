@@ -1,4 +1,4 @@
-package com.example.sd.learningproject.webView;
+package com.example.sd.learningproject.webView.simplewebview;
 
 import android.annotation.SuppressLint;
 import android.os.Build;

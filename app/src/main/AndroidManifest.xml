@@ -17,8 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".webView.SimpleWebViewActivity" />
+        <activity android:name=".webView.simplewebview.SimpleWebViewActivity" />
         <activity android:name=".webView.WebViewActivity" />
-    </application>
+        <activity android:name=".webView.basewebview.BaseWebViewActivity" />
+        <activity android:name=".webView.basewebview.TestWebViewActivity" />
+     </application>
 
 </manifest>
