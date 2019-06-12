@@ -8,6 +8,7 @@ import android.widget.Button;
 import com.example.sd.learningproject.R;
 import com.example.sd.learningproject.webView.basewebview.TestWebViewActivity;
 import com.example.sd.learningproject.webView.simplewebview.SimpleWebViewActivity;
+import com.example.sd.learningproject.webView.uploadimage.UploadImageActivity;
 
 public class WebViewActivity extends AppCompatActivity {
     @Override
@@ -30,6 +31,15 @@ public class WebViewActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent2= new Intent(WebViewActivity.this, TestWebViewActivity.class);
                 startActivity(intent2);
+            }
+        });
+
+        Button mUploadImageButton = (Button)findViewById(R.id.upload_image_button);
+        mUploadImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent3= new Intent(WebViewActivity.this, UploadImageActivity.class);
+                startActivity(intent3);
             }
         });
     }
