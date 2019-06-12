@@ -5,6 +5,9 @@ import android.support.annotation.Nullable;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
 
+/**
+ * 继承WebView基类的子类
+ */
 public class TestWebViewActivity extends BaseWebViewActivity implements BaseWebViewActivity.OtherActionListener {
 
     @Override

@@ -14,6 +14,9 @@ import com.example.sd.learningproject.R;
 import java.io.File;
 import java.util.UUID;
 
+/**
+ * WebView实现拍照及选择照片上传
+ */
 public class UploadImageActivity extends AppCompatActivity {
 
     private WebView mWebView = null;

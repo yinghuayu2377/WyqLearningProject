@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.example.sd.learningproject.R;
 
+/**
+ * 简单的native与js相互调用
+ */
 public class SimpleWebViewActivity extends AppCompatActivity {
 
     private WebView mSimpleWebView = null;
