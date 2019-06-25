@@ -26,6 +26,7 @@
         <activity android:name=".webView.basewebview.BaseWebViewActivity" />
         <activity android:name=".webView.basewebview.TestWebViewActivity" />
         <activity android:name=".webView.uploadimage.UploadImageActivity" />
+        <activity android:name=".menu.SimpleMenuActivity" />
      </application>
 
 </manifest>
