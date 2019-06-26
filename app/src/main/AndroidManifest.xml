@@ -27,6 +27,24 @@
         <activity android:name=".webView.basewebview.TestWebViewActivity" />
         <activity android:name=".webView.uploadimage.UploadImageActivity" />
         <activity android:name=".menu.SimpleMenuActivity" />
+        <activity android:name=".intent.Intent1Activity" />
+        <activity android:name=".intent.Intent2Activity">
+            <intent-filter>
+                <action android:name="com.example.sd.learningproject.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.sd.learningproject.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".intent.Intent3Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:scheme="example"
+                    android:host="com.example.sd"
+                    android:path="/Intent3Activity" />
+            </intent-filter>
+        </activity>
      </application>
 
 </manifest>
