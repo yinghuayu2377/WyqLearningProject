@@ -21,6 +21,10 @@ public class LifeCycleActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        if(savedInstanceState != null) {  // 若是被回收的情况,执行以下内容，取出保存的数据
+            String tempData = savedInstanceState.getString("data_key");
+            Log.e(TAG, tempData);
+        }
         Log.e(TAG, "onCreate()");
     }
 
@@ -73,5 +77,14 @@ public class LifeCycleActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         Log.e(TAG, "onRestart()");
+    }
+
+    // 在活动被回收之前会被调用--在A中启动了B，若内存不足，此时A被回收掉了，再返回到A的时候不会执行onRestart()方法，而是会执行onCreate()方法，之前保存的临时状态和数据
+    // 就会消失，所以在onSaveInstanceState中保存数据，在onCreate中从Bundle中取出这些值
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String tempData = "Something you just typed";
+        outState.putString("data_key", tempData);
     }
 }
