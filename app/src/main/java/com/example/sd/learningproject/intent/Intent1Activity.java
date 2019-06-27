@@ -6,17 +6,22 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import com.example.sd.learningproject.R;
 
-public class Intent1Activity extends AppCompatActivity implements View.OnClickListener {
+public class Intent1Activity extends AppCompatActivity {
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent);
+
+        ButterKnife.bind(this);
     }
 
-    @Override
-    public void onClick(View v) {
+    @OnClick({R.id.click_button1, R.id.click_button2, R.id.click_button3, R.id.click_button4, R.id.click_button5})
+    public void clikButton(View v) {
         switch (v.getId()) {
             case R.id.click_button1:  // 显式Intent
                 Intent intent = new Intent(this, Intent2Activity.class);
@@ -48,6 +53,7 @@ public class Intent1Activity extends AppCompatActivity implements View.OnClickLi
                 // path:主机名和端口号之后的部分  /Intent3Activity
                 Intent intent4 = new Intent(Intent.ACTION_VIEW, Uri.parse("example://com.example.sd/Intent3Activity"));
                 startActivity(intent4);
+                break;
         }
     }
 }

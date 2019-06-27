@@ -4,20 +4,25 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.menu.SimpleMenuActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ButterKnife.bind(this);
+
     }
 
-    @Override
-    public void onClick(View v) {
+    @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button})
+    public void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
                 Intent intent1 = new Intent(MainActivity.this, WebViewActivity.class);
