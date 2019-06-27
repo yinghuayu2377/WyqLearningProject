@@ -46,6 +46,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".intent.Intent4Activity" />
+        <activity android:name=".lifecycle.LifeCycleActivity" />
+        <activity android:name=".lifecycle.NormalActivity" />
+        <activity android:name=".lifecycle.DialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
      </application>
 
 </manifest>

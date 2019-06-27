@@ -7,6 +7,7 @@ import android.view.View;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.intent.Intent1Activity;
+import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.menu.SimpleMenuActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button})
+    @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button})
     public void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
@@ -37,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.intent_button:
                 Intent intent3 = new Intent(MainActivity.this, Intent1Activity.class);
                 startActivity(intent3);
+                break;
+
+            case R.id.life_cycle_button:
+                Intent intent4 = new Intent(MainActivity.this, LifeCycleActivity.class);
+                startActivity(intent4);
                 break;
         }
     }

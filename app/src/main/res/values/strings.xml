@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">LearningProject</string>
     <string name="java_call_js">javascript:callJs(\"%1$s\");</string>
+    <string name="go_to_normal">go to NormalActivity</string>
+    <string name="go_to_dialog">go to DialogActivity</string>
 </resources>
