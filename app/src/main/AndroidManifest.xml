@@ -45,6 +45,7 @@
                     android:path="/Intent3Activity" />
             </intent-filter>
         </activity>
+        <activity android:name=".intent.Intent4Activity" />
      </application>
 
 </manifest>

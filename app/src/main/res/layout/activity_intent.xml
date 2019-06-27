@@ -44,4 +44,18 @@
         android:text="隐式Intent--通过schema调用"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/click_button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="传递数据"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/click_button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实现返回数据"
+        android:textAllCaps="false" />
+
 </LinearLayout>

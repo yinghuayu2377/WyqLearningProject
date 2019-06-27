@@ -6,11 +6,16 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
 
 public class Intent1Activity extends AppCompatActivity {
+
+    @BindView(R.id.text_view)
+    TextView mTextView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,8 +25,9 @@ public class Intent1Activity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.click_button1, R.id.click_button2, R.id.click_button3, R.id.click_button4, R.id.click_button5})
-    public void clikButton(View v) {
+    @OnClick({R.id.click_button1, R.id.click_button2, R.id.click_button3, R.id.click_button4, R.id.click_button5,
+            R.id.click_button6, R.id.click_button7})
+    void clikButton(View v) {
         switch (v.getId()) {
             case R.id.click_button1:  // 显式Intent
                 Intent intent = new Intent(this, Intent2Activity.class);
@@ -54,6 +60,28 @@ public class Intent1Activity extends AppCompatActivity {
                 Intent intent4 = new Intent(Intent.ACTION_VIEW, Uri.parse("example://com.example.sd/Intent3Activity"));
                 startActivity(intent4);
                 break;
+
+            case R.id.click_button6:  // 传递数据
+                Intent intent5 = new Intent(this, Intent2Activity.class);
+                intent5.putExtra("extra_data", "Hello World");
+                startActivity(intent5);
+                break;
+
+            case R.id.click_button7: // 实现返回数据
+                Intent intent6 = new Intent(this, Intent4Activity.class);
+                startActivityForResult(intent6, 1);
+                break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);  // requestCode为启动活动时传入的请求码，resultCode为返回数据时候的处理结果
+        if(resultCode == RESULT_OK && requestCode == 1) {
+            String string = data.getStringExtra("data_return");
+            if(string != null && string.trim().length() != 0) {
+                mTextView.setText(string);
+            }
         }
     }
 }
