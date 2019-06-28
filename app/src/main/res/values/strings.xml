@@ -3,4 +3,8 @@
     <string name="java_call_js">javascript:callJs(\"%1$s\");</string>
     <string name="go_to_normal">go to NormalActivity</string>
     <string name="go_to_dialog">go to DialogActivity</string>
+    <string name="linear_layout">这部分是LinearLayout:</string>
+    <string name="linear_weight_bisection">这里是使用weight平分</string>
+    <string name="linear_weight_fill_other_area">这里是EditText填充剩余部分</string>
+    <string name="button_length_fixed">长度固定</string>
 </resources>
