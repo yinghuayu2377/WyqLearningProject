@@ -34,4 +34,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="生命周期"/>
+
+    <Button
+        android:id="@+id/widget_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="widget"/>
 </LinearLayout>

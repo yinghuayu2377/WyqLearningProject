@@ -50,6 +50,7 @@
         <activity android:name=".lifecycle.NormalActivity" />
         <activity android:name=".lifecycle.DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".widget.NormalWidgetActivity" />
      </application>
 
 </manifest>

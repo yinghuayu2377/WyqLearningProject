@@ -10,6 +10,7 @@ import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.menu.SimpleMenuActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
+import com.example.sd.learningproject.widget.NormalWidgetActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button})
-    public void clickButton(View v) {
+    @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button})
+    void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
                 Intent intent1 = new Intent(MainActivity.this, WebViewActivity.class);
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.life_cycle_button:
                 Intent intent4 = new Intent(MainActivity.this, LifeCycleActivity.class);
                 startActivity(intent4);
+                break;
+
+            case R.id.widget_button:
+                Intent intent5 = new Intent(MainActivity.this, NormalWidgetActivity.class);
+                startActivity(intent5);
                 break;
         }
     }
