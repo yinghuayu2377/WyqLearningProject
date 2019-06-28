@@ -7,4 +7,9 @@
     <string name="linear_weight_bisection">这里是使用weight平分</string>
     <string name="linear_weight_fill_other_area">这里是EditText填充剩余部分</string>
     <string name="button_length_fixed">长度固定</string>
+    <string name="constraint_layout">这部分是ConstraintLayout：</string>
+    <string name="text_view_first">TextView1</string>
+    <string name="text_view_second">TextView2</string>
+    <string name="text_view_third">TextView3</string>
+    <string name="text_view_circle_angle_location">这个是角度定位</string>
 </resources>

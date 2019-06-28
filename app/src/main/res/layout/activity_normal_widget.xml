@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <Button
@@ -8,43 +10,98 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AlertDialog"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/linear_layout"
-            android:textColor="#0088ff"
-            android:textStyle="bold"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/linear_weight_bisection"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/linear_weight_bisection"/>
-        </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/linear_layout"
+        android:textColor="#0088ff"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/linear_weight_bisection" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/linear_weight_bisection" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/linear_weight_fill_other_area"/>
+            android:text="@string/linear_weight_fill_other_area" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_length_fixed"/>
+            android:text="@string/button_length_fixed" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/constraint_layout"
+        android:layout_marginTop="@dimen/margin_20"
+        android:textSize="@dimen/text_size_20"
+        android:textColor="#0088ff"
+        android:textStyle="bold"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/text_view_first"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/text_view_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/text_view_second"
+            android:layout_marginLeft="@dimen/margin_20"
+            app:layout_constraintLeft_toRightOf="@id/text_view_first"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_view_first"/>
+        <TextView
+            android:id="@+id/text_view_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_third"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_first"/>
+        <TextView
+            android:id="@+id/text_view_fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_circle_angle_location"
+            android:background="@color/colorAccent"
+            app:layout_constraintCircle="@id/text_view_third"
+            app:layout_constraintCircleAngle="120"
+            app:layout_constraintCircleRadius="@dimen/margin_150"/>
+
+    </android.support.constraint.ConstraintLayout>
 </LinearLayout>
