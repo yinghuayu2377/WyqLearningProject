@@ -1,5 +1,6 @@
 package com.example.sd.learningproject;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
+import com.example.sd.learningproject.listview.ListViewActivity;
 import com.example.sd.learningproject.menu.SimpleMenuActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
 import com.example.sd.learningproject.widget.NormalWidgetActivity;
@@ -23,33 +25,38 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button})
+    @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button,
+            R.id.list_view_button})
     void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
-                Intent intent1 = new Intent(MainActivity.this, WebViewActivity.class);
-                startActivity(intent1);
+                gotoOtherActivity(WebViewActivity.class);
                 break;
 
             case R.id.menu_button:
-                Intent intent2 = new Intent(MainActivity.this, SimpleMenuActivity.class);
-                startActivity(intent2);
+                gotoOtherActivity(SimpleMenuActivity.class);
                 break;
 
             case R.id.intent_button:
-                Intent intent3 = new Intent(MainActivity.this, Intent1Activity.class);
-                startActivity(intent3);
+                gotoOtherActivity(Intent1Activity.class);
                 break;
 
             case R.id.life_cycle_button:
-                Intent intent4 = new Intent(MainActivity.this, LifeCycleActivity.class);
-                startActivity(intent4);
+                gotoOtherActivity(LifeCycleActivity.class);
                 break;
 
             case R.id.widget_button:
-                Intent intent5 = new Intent(MainActivity.this, NormalWidgetActivity.class);
-                startActivity(intent5);
+                gotoOtherActivity(NormalWidgetActivity.class);
+                break;
+
+            case R.id.list_view_button:
+                gotoOtherActivity(ListViewActivity.class);
                 break;
         }
+    }
+
+    private void gotoOtherActivity(Class activityClass) {
+        Intent intent = new Intent(this, activityClass);
+        startActivity(intent);
     }
 }

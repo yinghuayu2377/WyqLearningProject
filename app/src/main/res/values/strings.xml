@@ -12,4 +12,6 @@
     <string name="text_view_second">TextView2</string>
     <string name="text_view_third">TextView3</string>
     <string name="text_view_circle_angle_location">这个是角度定位</string>
+    <string name="normal_list_view">ListView简单使用</string>
+    <string name="custom_list_view_adapter">自定义adapter</string>
 </resources>

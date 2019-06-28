@@ -51,6 +51,9 @@
         <activity android:name=".lifecycle.DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity android:name=".widget.NormalWidgetActivity" />
+        <activity android:name=".listview.NormalListViewActivity" />
+        <activity android:name=".listview.ListViewActivity" />
+        <activity android:name=".listview.customlistview.CustomListActivity" />
      </application>
 
 </manifest>

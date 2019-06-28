@@ -41,4 +41,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="widget"/>
+
+    <Button
+        android:id="@+id/list_view_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ListView"/>
 </LinearLayout>
