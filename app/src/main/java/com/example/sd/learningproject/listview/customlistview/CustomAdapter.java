@@ -20,10 +20,6 @@ import java.util.List;
  * 自定义adapter
  */
 public class CustomAdapter extends ArrayAdapter<Fruit> {
-    @BindView(R.id.text_view_name)
-    TextView mTextViewName;
-    @BindView(R.id.text_view_desc)
-    TextView mTextViewDesc;
 
     private int mResourceId;
     private List<Fruit> mDatas = new ArrayList<>();
@@ -38,11 +34,21 @@ public class CustomAdapter extends ArrayAdapter<Fruit> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Fruit fruit = getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(mResourceId, parent, false);
+        View view;
+        ViewHolder viewHolder;
 
-        ButterKnife.bind(this, view);
-        mTextViewName.setText(fruit.getName());
-        mTextViewDesc.setText(fruit.getDesc());
+        if(convertView == null) {
+            view = LayoutInflater.from(getContext()).inflate(mResourceId, parent, false);
+            viewHolder = new ViewHolder();
+            viewHolder.textViewName = (TextView)view.findViewById(R.id.text_view_name);
+            viewHolder.textViewDesc = (TextView)view.findViewById(R.id.text_view_desc);
+            view.setTag(viewHolder);  // 将ViewHolder存储在view中
+        } else {
+            view = convertView;
+            viewHolder = (ViewHolder)view.getTag();  // 重新获取ViewHolder
+        }
+        viewHolder.textViewName.setText(fruit.getName());
+        viewHolder.textViewDesc.setText(fruit.getDesc());
         return view;
     }
 
@@ -50,5 +56,10 @@ public class CustomAdapter extends ArrayAdapter<Fruit> {
     @Override
     public Fruit getItem(int position) {
         return mDatas.get(position);
+    }
+
+    class ViewHolder {
+        TextView textViewName;
+        TextView textViewDesc;
     }
 }
