@@ -11,6 +11,7 @@ import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.listview.ListViewActivity;
 import com.example.sd.learningproject.menu.SimpleMenuActivity;
+import com.example.sd.learningproject.recyclerview.RecyclerViewActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
 import com.example.sd.learningproject.widget.NormalWidgetActivity;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button,
-            R.id.list_view_button})
+            R.id.list_view_button, R.id.recycler_view_button})
     void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.list_view_button:
                 gotoOtherActivity(ListViewActivity.class);
+                break;
+
+            case R.id.recycler_view_button:
+                gotoOtherActivity(RecyclerViewActivity.class);
                 break;
         }
     }

@@ -54,6 +54,7 @@
         <activity android:name=".listview.NormalListViewActivity" />
         <activity android:name=".listview.ListViewActivity" />
         <activity android:name=".listview.customlistview.CustomListActivity" />
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
      </application>
 
 </manifest>
