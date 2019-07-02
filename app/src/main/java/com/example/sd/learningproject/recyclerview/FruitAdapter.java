@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.example.sd.learningproject.R;
 import com.example.sd.learningproject.listview.customlistview.Fruit;
 
@@ -17,11 +18,13 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
     private int mLayoutId;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+        View fruitView;
         TextView textViewName;
         TextView textViewDesc;
 
         public ViewHolder(View view) {
             super(view);
+            fruitView = view;
             textViewName = (TextView)view.findViewById(R.id.text_view_name);
             textViewDesc = (TextView)view.findViewById(R.id.text_view_desc);
         }
@@ -34,9 +37,25 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(@NonNull final ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(mLayoutId, viewGroup, false);
-        ViewHolder viewHolder = new ViewHolder(view);
+        final ViewHolder viewHolder = new ViewHolder(view);
+        viewHolder.fruitView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = viewHolder.getAdapterPosition();
+                Fruit fruit = mFruitList.get(position);
+                Toast.makeText(viewGroup.getContext(), fruit.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        viewHolder.textViewDesc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = viewHolder.getAdapterPosition();
+                Fruit fruit = mFruitList.get(position);
+                Toast.makeText(viewGroup.getContext(), fruit.getDesc(), Toast.LENGTH_SHORT).show();
+            }
+        });
         return viewHolder;
     }
 
