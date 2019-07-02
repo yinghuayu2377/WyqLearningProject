@@ -29,6 +29,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         initFruits();
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);  // 指定布局排列方式为横向排列
         mRecyclerView.setLayoutManager(layoutManager);  // 指定布局方式为线性布局
         FruitAdapter adapter = new FruitAdapter(mDatas);
         mRecyclerView.setAdapter(adapter);
