@@ -14,6 +14,7 @@ import java.util.List;
 public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> {
 
     private List<Fruit> mFruitList;
+    private int mLayoutId;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView textViewName;
@@ -26,14 +27,15 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
         }
     }
 
-    public FruitAdapter(List<Fruit> fruitList) {
+    public FruitAdapter(List<Fruit> fruitList, int layoutId) {
         mFruitList = fruitList;
+        mLayoutId = layoutId;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_custom_adapter_item, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(mLayoutId, viewGroup, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

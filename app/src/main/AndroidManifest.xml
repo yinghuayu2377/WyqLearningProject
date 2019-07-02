@@ -55,6 +55,8 @@
         <activity android:name=".listview.ListViewActivity" />
         <activity android:name=".listview.customlistview.CustomListActivity" />
         <activity android:name=".recyclerview.RecyclerViewActivity" />
+        <activity android:name=".recyclerview.StaggeredGridLayoutManagerActivity" />
+        <activity android:name=".recyclerview.RecyclerViewStartActivity" />
      </application>
 
 </manifest>

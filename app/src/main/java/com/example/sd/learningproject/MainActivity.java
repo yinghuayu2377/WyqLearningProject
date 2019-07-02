@@ -12,6 +12,7 @@ import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.listview.ListViewActivity;
 import com.example.sd.learningproject.menu.SimpleMenuActivity;
 import com.example.sd.learningproject.recyclerview.RecyclerViewActivity;
+import com.example.sd.learningproject.recyclerview.RecyclerViewStartActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
 import com.example.sd.learningproject.widget.NormalWidgetActivity;
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.recycler_view_button:
-                gotoOtherActivity(RecyclerViewActivity.class);
+                gotoOtherActivity(RecyclerViewStartActivity.class);
                 break;
         }
     }
