@@ -32,6 +32,8 @@ public class RecyclerViewStartActivity extends AppCompatActivity {
                 break;
 
             case R.id.click_button3:
+                Intent intent2 = new Intent(this, GridLayoutManagerActivity.class);
+                startActivity(intent2);
                 break;
         }
     }

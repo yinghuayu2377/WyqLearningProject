@@ -57,6 +57,7 @@
         <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity android:name=".recyclerview.StaggeredGridLayoutManagerActivity" />
         <activity android:name=".recyclerview.RecyclerViewStartActivity" />
+        <activity android:name=".recyclerview.GridLayoutManagerActivity" />
      </application>
 
 </manifest>
