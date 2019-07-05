@@ -60,6 +60,7 @@
         <activity android:name=".recyclerview.GridLayoutManagerActivity" />
         <activity android:name=".fragment.FragmentStartActivity" />
         <activity android:name=".fragment.NormalFragmentActivity" />
+        <activity android:name=".fragment.DynamicAddFragmentActivity" />
      </application>
 
 </manifest>

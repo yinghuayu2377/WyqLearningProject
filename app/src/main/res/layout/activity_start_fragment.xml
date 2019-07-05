@@ -10,4 +10,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="@string/text_normal_fragment"/>
+
+    <Button
+        android:id="@+id/button_dynamic_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/text_dynamic_add_fragment"/>
 </LinearLayout>

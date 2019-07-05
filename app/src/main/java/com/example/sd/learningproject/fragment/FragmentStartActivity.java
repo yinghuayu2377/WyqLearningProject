@@ -19,12 +19,17 @@ public class FragmentStartActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.button_normal})
+    @OnClick({R.id.button_normal, R.id.button_dynamic_add})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button_normal:
                 Intent intent = new Intent(this, NormalFragmentActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.button_dynamic_add:
+                Intent intent1 = new Intent(this, DynamicAddFragmentActivity.class);
+                startActivity(intent1);
                 break;
         }
     }

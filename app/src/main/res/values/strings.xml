@@ -17,4 +17,5 @@
     <string name="text_button">Button</string>
     <string name="normal_fragment">This is right fragment</string>
     <string name="text_normal_fragment">直接在layout中引用fragment</string>
+    <string name="text_dynamic_add_fragment">动态添加fragment</string>
 </resources>
