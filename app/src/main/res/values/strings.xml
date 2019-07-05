@@ -14,4 +14,7 @@
     <string name="text_view_circle_angle_location">这个是角度定位</string>
     <string name="normal_list_view">ListView简单使用</string>
     <string name="custom_list_view_adapter">自定义adapter</string>
+    <string name="text_button">Button</string>
+    <string name="normal_fragment">This is right fragment</string>
+    <string name="text_normal_fragment">直接在layout中引用fragment</string>
 </resources>

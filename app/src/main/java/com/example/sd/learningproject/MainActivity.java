@@ -1,17 +1,16 @@
 package com.example.sd.learningproject;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.example.sd.learningproject.fragment.FragmentStartActivity;
 import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.listview.ListViewActivity;
 import com.example.sd.learningproject.menu.SimpleMenuActivity;
-import com.example.sd.learningproject.recyclerview.RecyclerViewActivity;
 import com.example.sd.learningproject.recyclerview.RecyclerViewStartActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
 import com.example.sd.learningproject.widget.NormalWidgetActivity;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button,
-            R.id.list_view_button, R.id.recycler_view_button})
+            R.id.list_view_button, R.id.recycler_view_button, R.id.fragment_button})
     void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
@@ -57,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.recycler_view_button:
                 gotoOtherActivity(RecyclerViewStartActivity.class);
+                break;
+
+            case R.id.fragment_button:
+                gotoOtherActivity(FragmentStartActivity.class);
                 break;
         }
     }

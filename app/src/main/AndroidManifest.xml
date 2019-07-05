@@ -58,6 +58,8 @@
         <activity android:name=".recyclerview.StaggeredGridLayoutManagerActivity" />
         <activity android:name=".recyclerview.RecyclerViewStartActivity" />
         <activity android:name=".recyclerview.GridLayoutManagerActivity" />
+        <activity android:name=".fragment.FragmentStartActivity" />
+        <activity android:name=".fragment.NormalFragmentActivity" />
      </application>
 
 </manifest>
