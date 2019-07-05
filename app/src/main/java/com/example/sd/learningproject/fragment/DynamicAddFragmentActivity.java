@@ -38,6 +38,7 @@ public class DynamicAddFragmentActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.layout_right, fragment);
+        transaction.addToBackStack(null);  // 将事务添加到Fragment事务返回栈，点击back按钮后撤销事务并回退到上一个Fragment
         transaction.commit();
     }
 }
