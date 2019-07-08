@@ -9,11 +9,12 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
 
-public class BroadcastReceiverStartActivity extends AppCompatActivity {
+public class MyBroadcastReceiverActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_broad_cast_receiver_start);
+        setContentView(R.layout.activity_my_boradcast_receiver);
 
         ButterKnife.bind(this);
     }
@@ -22,13 +23,15 @@ public class BroadcastReceiverStartActivity extends AppCompatActivity {
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
-                Intent intent = new Intent(this, NetworkChangeActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent("com.example.sd.MY_BROADCAST");
+                intent.setPackage(getPackageName());
+                sendBroadcast(intent);  // 发送标准广播
                 break;
 
             case R.id.button2:
-                Intent intent1 = new Intent(this, MyBroadcastReceiverActivity.class);
-                startActivity(intent1);
+                Intent intent1 = new Intent("com.example.sd.MY_BROADCAST");
+                intent1.setPackage(getPackageName());
+                sendOrderedBroadcast(intent1, null);  // 发送有序广播
                 break;
         }
     }
