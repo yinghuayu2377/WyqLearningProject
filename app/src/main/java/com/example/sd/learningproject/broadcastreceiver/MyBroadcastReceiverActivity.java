@@ -9,6 +9,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
 
+/**
+ * 发送自定义广播
+ */
 public class MyBroadcastReceiverActivity extends AppCompatActivity {
 
     @Override

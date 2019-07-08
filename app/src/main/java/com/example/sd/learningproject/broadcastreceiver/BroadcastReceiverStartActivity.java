@@ -18,7 +18,7 @@ public class BroadcastReceiverStartActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.button1, R.id.button2})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -29,6 +29,11 @@ public class BroadcastReceiverStartActivity extends AppCompatActivity {
             case R.id.button2:
                 Intent intent1 = new Intent(this, MyBroadcastReceiverActivity.class);
                 startActivity(intent1);
+                break;
+
+            case R.id.button3:
+                Intent intent2 = new Intent(this, LocalBroadcastReceiverActivity.class);
+                startActivity(intent2);
                 break;
         }
     }
