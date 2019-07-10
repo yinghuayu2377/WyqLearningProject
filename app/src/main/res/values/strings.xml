@@ -27,4 +27,6 @@
     <string name="text_memory_data_by_file">将数据存储在文件中</string>
     <string name="text_memory_data_in_internal_storage">将数据存储在内部存储中</string>
     <string name="text_memory_data_in_external_storage">将数据存储在外部存储中</string>
+    <string name="text_read_memory_data_from_internal_storage">从内部存储中读取文件</string>
+    <string name="text_read_memory_data_from_external_storage">从外部存储中读取文件</string>
 </resources>
