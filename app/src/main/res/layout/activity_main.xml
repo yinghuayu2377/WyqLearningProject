@@ -69,4 +69,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Broadcast Receiver"/>
+
+    <Button
+        android:id="@+id/memory_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="保存数据"/>
 </LinearLayout>

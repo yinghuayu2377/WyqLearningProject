@@ -24,4 +24,7 @@
     <string name="text_send_custom_standard_broadcast">发送标准广播</string>
     <string name="text_send_custom_orderly_broadcast">发送有序广播</string>
     <string name="text_send_local_broadcast">发送本地广播</string>
+    <string name="text_memory_data_by_file">将数据存储在文件中</string>
+    <string name="text_memory_data_in_internal_storage">将数据存储在内部存储中</string>
+    <string name="text_memory_data_in_external_storage">将数据存储在外部存储中</string>
 </resources>

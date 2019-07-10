@@ -87,6 +87,8 @@
         </receiver>
         <activity android:name=".broadcastreceiver.MyBroadcastReceiverActivity" />
         <activity android:name=".broadcastreceiver.LocalBroadcastReceiverActivity" />
+        <activity android:name=".storage.FileSaveActivity" />
+        <activity android:name=".storage.StorageActivity" />
     </application>
 
 </manifest>
