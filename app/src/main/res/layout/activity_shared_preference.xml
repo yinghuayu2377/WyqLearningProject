@@ -8,12 +8,19 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_memory_data_by_file"/>
+        android:text="@string/text_memory_data_by_shared_preference"
+        android:textAllCaps="false"/>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="@string/text_memory_data_by_shared_preference"/>
+        android:text="@string/text_read_data_from_shared_preferneces"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

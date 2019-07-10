@@ -29,4 +29,6 @@
     <string name="text_memory_data_in_external_storage">将数据存储在外部存储中</string>
     <string name="text_read_memory_data_from_internal_storage">从内部存储中读取文件</string>
     <string name="text_read_memory_data_from_external_storage">从外部存储中读取文件</string>
+    <string name="text_memory_data_by_shared_preference">通过SharedPreferences保存数据</string>
+    <string name="text_read_data_from_shared_preferneces">读取数据</string>
 </resources>

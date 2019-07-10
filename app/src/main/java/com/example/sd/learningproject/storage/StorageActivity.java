@@ -17,12 +17,17 @@ public class StorageActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.button1})
+    @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
                 Intent intent = new Intent(this, FileSaveActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.button2:
+                Intent intent1 = new Intent(this, SharedPreferenceActivity.class);
+                startActivity(intent1);
                 break;
         }
     }

@@ -89,6 +89,7 @@
         <activity android:name=".broadcastreceiver.LocalBroadcastReceiverActivity" />
         <activity android:name=".storage.FileSaveActivity" />
         <activity android:name=".storage.StorageActivity" />
+        <activity android:name=".storage.SharedPreferenceActivity" />
     </application>
 
 </manifest>
