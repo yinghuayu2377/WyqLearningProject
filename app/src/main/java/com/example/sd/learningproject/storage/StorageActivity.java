@@ -8,6 +8,7 @@ import android.view.View;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
+import com.example.sd.learningproject.storage.sql.SqlActivity;
 
 public class StorageActivity extends AppCompatActivity {
     @Override
@@ -17,7 +18,7 @@ public class StorageActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.button1, R.id.button2})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -28,6 +29,11 @@ public class StorageActivity extends AppCompatActivity {
             case R.id.button2:
                 Intent intent1 = new Intent(this, SharedPreferenceActivity.class);
                 startActivity(intent1);
+                break;
+
+            case R.id.button3:
+                Intent intent2 = new Intent(this, SqlActivity.class);
+                startActivity(intent2);
                 break;
         }
     }

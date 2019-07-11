@@ -90,6 +90,7 @@
         <activity android:name=".storage.FileSaveActivity" />
         <activity android:name=".storage.StorageActivity" />
         <activity android:name=".storage.SharedPreferenceActivity" />
+        <activity android:name=".storage.sql.SqlActivity" />
     </application>
 
 </manifest>
