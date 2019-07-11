@@ -20,6 +20,8 @@ public class SqlActivity extends AppCompatActivity {
 
     @BindView(R.id.text_view)
     TextView mTextView;
+    @BindView(R.id.text_view_1)
+    TextView mTextView1;
 
     private MyDatabaseHelper databaseHelper = null;
     private MyDatabaseHelper databaseHelperSecond = null;
@@ -36,7 +38,8 @@ public class SqlActivity extends AppCompatActivity {
         sqLiteDatabase = databaseHelperSecond.getWritableDatabase();
     }
 
-    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6,
+            R.id.button7, R.id.button8, R.id.button9, R.id.button10})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -79,24 +82,46 @@ public class SqlActivity extends AppCompatActivity {
 
             case R.id.button6:
                 Cursor cursor = sqLiteDatabase.query("Book", null, null, null, null, null, null);
-                StringBuilder content = new StringBuilder();
-                if(cursor.moveToFirst()) {
-                    do {
-                        String name = cursor.getString(cursor.getColumnIndex("name"));
-                        String author = cursor.getString(cursor.getColumnIndex("author"));
-                        int pages = cursor.getInt(cursor.getColumnIndex("pages"));
-                        float price = cursor.getFloat(cursor.getColumnIndex("price"));
-                        StringBuilder stringBuilder = new StringBuilder();
-                        stringBuilder.append(name);
-                        stringBuilder.append(pages);
-                        stringBuilder.append(author);
-                        stringBuilder.append(price);
-                        stringBuilder.append("\n");
-                        content.append(stringBuilder);
-                    } while (cursor.moveToNext());
-                }
-                mTextView.setText(content.toString());
+                mTextView.setText(getSqlContent(cursor));
+                break;
+
+            case R.id.button7:  // 通过sql语句添加数据
+                sqLiteDatabase.execSQL("insert into Book (name, author, pages, price)" +
+                        "values(?,?,?,?)", new String[]{"The Da Vinci Code 3", "Dan Brown 3", "454", "23.67"});
+                break;
+
+            case R.id.button8:
+                sqLiteDatabase.execSQL("update Book set price = ? where name = ?", new String[] {"23", "The Da Vinci Code 3"});
+                break;
+
+            case R.id.button9:
+                sqLiteDatabase.execSQL("delete from Book where pages > ?", new String[] {"300"});
+                break;
+
+            case R.id.button10:
+                Cursor cursor1 = sqLiteDatabase.rawQuery("select * from Book", null);
+                mTextView1.setText(getSqlContent(cursor1));
                 break;
         }
+    }
+
+    private String getSqlContent(Cursor cursor) {
+        StringBuilder content = new StringBuilder();
+        if (cursor.moveToFirst()) {
+            do {
+                String name = cursor.getString(cursor.getColumnIndex("name"));
+                String author = cursor.getString(cursor.getColumnIndex("author"));
+                int pages = cursor.getInt(cursor.getColumnIndex("pages"));
+                float price = cursor.getFloat(cursor.getColumnIndex("price"));
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.append(name);
+                stringBuilder.append(pages);
+                stringBuilder.append(author);
+                stringBuilder.append(price);
+                stringBuilder.append("\n");
+                content.append(stringBuilder);
+            } while (cursor.moveToNext());
+        }
+        return content.toString();
     }
 }

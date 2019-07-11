@@ -37,5 +37,9 @@
     <string name="text_update_data">更新数据</string>
     <string name="text_delete_data">删除数据</string>
     <string name="text_select_data">查找数据</string>
+    <string name="text_add_data_by_sql">通过sql语句添加数据</string>
+    <string name="text_update_data_by_sql">通过sql语句更新数据</string>
+    <string name="text_delete_data_by_sql">通过sql语句删除数据</string>
+    <string name="text_select_data_by_sql">通过sql语句查找数据</string>
     <string name="text_memory_data_by_sql">将数据存储在数据库中</string>
 </resources>
