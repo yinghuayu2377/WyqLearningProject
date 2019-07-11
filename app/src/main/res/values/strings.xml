@@ -34,5 +34,8 @@
     <string name="text_create_sql">创建数据库</string>
     <string name="text_upgrade_sql">更新数据库</string>
     <string name="text_add_data">添加数据</string>
+    <string name="text_update_data">更新数据</string>
+    <string name="text_delete_data">删除数据</string>
+    <string name="text_select_data">查找数据</string>
     <string name="text_memory_data_by_sql">将数据存储在数据库中</string>
 </resources>
