@@ -32,5 +32,6 @@
     <string name="text_memory_data_by_shared_preference">通过SharedPreferences保存数据</string>
     <string name="text_read_data_from_shared_preferneces">读取数据</string>
     <string name="text_create_sql">创建数据库</string>
+    <string name="text_upgrade_sql">更新数据库</string>
     <string name="text_memory_data_by_sql">将数据存储在数据库中</string>
 </resources>

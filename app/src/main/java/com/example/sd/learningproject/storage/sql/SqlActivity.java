@@ -23,10 +23,15 @@ public class SqlActivity extends AppCompatActivity {
         databaseHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
     }
 
-    @OnClick({R.id.button1})
+    @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
+                databaseHelper.getWritableDatabase();
+                break;
+
+            case R.id.button2:
+                databaseHelper = new MyDatabaseHelper(this, "BookStore.db", null ,2);
                 databaseHelper.getWritableDatabase();
                 break;
         }
