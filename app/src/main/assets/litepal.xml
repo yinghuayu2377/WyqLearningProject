@@ -4,5 +4,6 @@
     <version value="1"></version>
     <list>
         <mapping class="com.example.sd.learningproject.storage.litepal.Book"></mapping>
+        <mapping class="com.example.sd.learningproject.storage.litepal.Category"></mapping>
     </list>
 </litepal>
