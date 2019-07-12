@@ -12,6 +12,7 @@ import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.listview.ListViewActivity;
 import com.example.sd.learningproject.menu.SimpleMenuActivity;
+import com.example.sd.learningproject.permission.PermissionActivity;
 import com.example.sd.learningproject.recyclerview.RecyclerViewStartActivity;
 import com.example.sd.learningproject.storage.StorageActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button,
             R.id.list_view_button, R.id.recycler_view_button, R.id.fragment_button, R.id.broadcast_receiver_button,
-            R.id.memory_button})
+            R.id.memory_button, R.id.dynamic_apply_permission_button})
     void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
@@ -71,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.memory_button:
                 gotoOtherActivity(StorageActivity.class);
+                break;
+
+            case R.id.dynamic_apply_permission_button:
+                gotoOtherActivity(PermissionActivity.class);
                 break;
         }
     }
