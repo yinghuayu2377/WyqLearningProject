@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
+        android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -91,6 +92,7 @@
         <activity android:name=".storage.StorageActivity" />
         <activity android:name=".storage.SharedPreferenceActivity" />
         <activity android:name=".storage.sql.SqlActivity" />
+        <activity android:name=".storage.litepal.LitePalActivity" />
     </application>
 
 </manifest>
