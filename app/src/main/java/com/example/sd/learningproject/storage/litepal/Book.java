@@ -1,6 +1,5 @@
 package com.example.sd.learningproject.storage.litepal;
 
-import org.litepal.crud.DataSupport;
 import org.litepal.crud.LitePalSupport;
 
 public class Book extends LitePalSupport {

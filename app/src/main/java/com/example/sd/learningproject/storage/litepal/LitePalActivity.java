@@ -47,6 +47,23 @@ public class LitePalActivity extends AppCompatActivity {
             case R.id.button2:  // 更新数据库
                 Connector.getDatabase();
                 break;
+
+            case R.id.button3:  // 添加数据
+                Book book = new Book();
+                book.setAuthor("mantianxing");
+                book.setName("The Love of World");
+                book.setPages(124);
+                book.setPress("UnKnow");
+                book.setPrice((float) 12.98);
+                book.save();
+                break;
+
+            case R.id.button4:   // 更新数据
+                Book book1 = new Book();
+                book1.setPress("Anchor");
+                book1.setPrice((float) 12.555);
+                book1.updateAll("name = ? and author = ?", "The Love of World", "mantianxing");
+                break;
         }
     }
 }
