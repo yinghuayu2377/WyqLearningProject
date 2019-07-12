@@ -42,4 +42,5 @@
     <string name="text_delete_data_by_sql">通过sql语句删除数据</string>
     <string name="text_select_data_by_sql">通过sql语句查找数据</string>
     <string name="text_memory_data_by_sql">将数据存储在数据库中</string>
+    <string name="text_memory_data_by_lite_pal">通过LitePal将数据存储在数据库中</string>
 </resources>
