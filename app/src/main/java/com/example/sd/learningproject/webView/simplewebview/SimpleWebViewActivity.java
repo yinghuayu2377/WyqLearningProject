@@ -1,6 +1,8 @@
 package com.example.sd.learningproject.webView.simplewebview;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -52,6 +54,15 @@ public class SimpleWebViewActivity extends AppCompatActivity {
                 dialog.create().show();
                 result.cancel();  // 一定要调用cancel()或confirm()，不然onJsAlert只会调用一次
                 return true;
+            }
+        });
+        mSimpleWebView.setDownloadListener(new DownloadListener() {
+            @Override
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
             }
         });
     }
