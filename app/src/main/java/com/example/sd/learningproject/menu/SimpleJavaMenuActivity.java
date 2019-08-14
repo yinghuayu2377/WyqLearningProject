@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.example.sd.learningproject.R;
 
 /**
- * 用java代码构建的普通选项菜单
+ * 用java代码构建的普通选项菜单--并在运行中修改menu
  */
 public class SimpleJavaMenuActivity extends AppCompatActivity {
     private boolean isShow = false;
