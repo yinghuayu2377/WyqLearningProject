@@ -8,6 +8,9 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import com.example.sd.learningproject.R;
 
+/**
+ * 普通选项菜单
+ */
 public class SimpleMenuActivity extends AppCompatActivity {
 
     @Override
@@ -27,7 +30,7 @@ public class SimpleMenuActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item_add:
-                Toast.makeText(this, "You clicked Add", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "You clicked Setting", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.item_remove:
                 Toast.makeText(this, "You clicked Remove", Toast.LENGTH_SHORT).show();

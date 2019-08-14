@@ -11,7 +11,7 @@ import com.example.sd.learningproject.fragment.FragmentStartActivity;
 import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.listview.ListViewActivity;
-import com.example.sd.learningproject.menu.SimpleMenuActivity;
+import com.example.sd.learningproject.menu.MenuStartActivity;
 import com.example.sd.learningproject.permission.PermissionActivity;
 import com.example.sd.learningproject.recyclerview.RecyclerViewStartActivity;
 import com.example.sd.learningproject.storage.StorageActivity;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.menu_button:
-                gotoOtherActivity(SimpleMenuActivity.class);
+                gotoOtherActivity(MenuStartActivity.class);
                 break;
 
             case R.id.intent_button:

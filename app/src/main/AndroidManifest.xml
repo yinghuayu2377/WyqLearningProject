@@ -97,6 +97,8 @@
         <activity android:name=".storage.sql.SqlActivity" />
         <activity android:name=".storage.litepal.LitePalActivity" />
         <activity android:name=".permission.PermissionActivity" />
+        <activity android:name=".menu.MenuStartActivity" />
+        <activity android:name=".menu.SimpleJavaMenuActivity" />
     </application>
 
 </manifest>
