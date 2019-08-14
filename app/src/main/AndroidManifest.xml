@@ -99,6 +99,7 @@
         <activity android:name=".permission.PermissionActivity" />
         <activity android:name=".menu.MenuStartActivity" />
         <activity android:name=".menu.SimpleJavaMenuActivity" />
+        <activity android:name=".menu.OptionsMenuFragmentActivity" />
     </application>
 
 </manifest>

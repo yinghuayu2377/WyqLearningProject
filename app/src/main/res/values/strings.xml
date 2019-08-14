@@ -46,4 +46,5 @@
     <string name="text_dynamic_apply_permission">动态申请权限</string>
     <string name="text_button_xml_menu">使用xml构建普通选项menu</string>
     <string name="text_button_java_menu">使用java代码构建普通选项menu</string>
+    <string name="text_button_normal_fragment_menu">在fragment中构建普通选项menu</string>
 </resources>
