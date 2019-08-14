@@ -25,4 +25,11 @@
         android:textAllCaps="false"
         android:text="@string/text_button_normal_fragment_menu" />
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/text_button_context_menu" />
+
 </LinearLayout>

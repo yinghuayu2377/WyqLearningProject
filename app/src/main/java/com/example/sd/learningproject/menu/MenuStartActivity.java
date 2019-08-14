@@ -18,7 +18,7 @@ public class MenuStartActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.button1, R.id.button2, R.id.button3})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4})
     void gotoOtherActivity(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -31,6 +31,10 @@ public class MenuStartActivity extends AppCompatActivity {
 
             case R.id.button3:
                 gotoActivity(OptionsMenuFragmentActivity.class);
+                break;
+
+            case R.id.button4:
+                gotoActivity(ContextMenuActivity.class);
                 break;
         }
     }

@@ -100,6 +100,7 @@
         <activity android:name=".menu.MenuStartActivity" />
         <activity android:name=".menu.SimpleJavaMenuActivity" />
         <activity android:name=".menu.OptionsMenuFragmentActivity" />
+        <activity android:name=".menu.ContextMenuActivity" />
     </application>
 
 </manifest>
