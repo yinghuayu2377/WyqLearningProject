@@ -48,5 +48,7 @@
     <string name="text_button_java_menu">使用java代码构建普通选项menu</string>
     <string name="text_button_normal_fragment_menu">在fragment中构建普通选项menu</string>
     <string name="text_button_context_menu">上下文菜单</string>
+    <string name="text_button_popup_menu">弹出菜单</string>
     <string name="text_button_long_click_show_context_menu">长按弹出上下文菜单</string>
+    <string name="text_button_click_show_popup_menu">点击展示弹出菜单</string>
 </resources>
