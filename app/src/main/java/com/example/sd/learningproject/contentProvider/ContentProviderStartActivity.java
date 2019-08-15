@@ -1,4 +1,4 @@
-package com.example.sd.learningproject.contentResolver;
+package com.example.sd.learningproject.contentProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
 
-public class ContentResolverStartActivity extends AppCompatActivity {
+public class ContentProviderStartActivity extends AppCompatActivity {
     @BindView(R.id.button1)
     Button mButton1;
     @BindView(R.id.button2)

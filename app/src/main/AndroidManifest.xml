@@ -103,8 +103,8 @@
         <activity android:name=".menu.OptionsMenuFragmentActivity" />
         <activity android:name=".menu.ContextMenuActivity" />
         <activity android:name=".menu.PopupMenuActivity" />
-        <activity android:name=".contentResolver.ContentResolverStartActivity" />
-        <activity android:name=".contentResolver.ReadSystemContactsActivity" />
+        <activity android:name=".contentProvider.ContentProviderStartActivity" />
+        <activity android:name=".contentProvider.ReadSystemContactsActivity" />
     </application>
 
 </manifest>

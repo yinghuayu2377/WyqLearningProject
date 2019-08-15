@@ -7,7 +7,7 @@ import android.view.View;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.broadcastreceiver.BroadcastReceiverStartActivity;
-import com.example.sd.learningproject.contentResolver.ContentResolverStartActivity;
+import com.example.sd.learningproject.contentProvider.ContentProviderStartActivity;
 import com.example.sd.learningproject.fragment.FragmentStartActivity;
 import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.content_resolver:
-                gotoOtherActivity(ContentResolverStartActivity.class);
+                gotoOtherActivity(ContentProviderStartActivity.class);
                 break;
         }
     }

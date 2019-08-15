@@ -1,4 +1,4 @@
-package com.example.sd.learningproject.contentResolver;
+package com.example.sd.learningproject.contentProvider;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
