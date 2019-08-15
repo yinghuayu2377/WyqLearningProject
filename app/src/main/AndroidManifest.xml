@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -102,6 +103,8 @@
         <activity android:name=".menu.OptionsMenuFragmentActivity" />
         <activity android:name=".menu.ContextMenuActivity" />
         <activity android:name=".menu.PopupMenuActivity" />
+        <activity android:name=".contentResolver.ContentResolverStartActivity" />
+        <activity android:name=".contentResolver.ReadSystemContactsActivity" />
     </application>
 
 </manifest>
