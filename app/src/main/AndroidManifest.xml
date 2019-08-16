@@ -112,6 +112,8 @@
             android:enabled="true"
             android:exported="true">
         </provider>
+        <activity android:name=".notification.SendNotificationActivity" />
+        <activity android:name=".notification.NotificationStartActivity" />
     </application>
 
 </manifest>

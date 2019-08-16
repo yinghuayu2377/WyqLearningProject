@@ -90,4 +90,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="内容提供器 Content Resolver"/>
+
+    <Button
+        android:id="@+id/notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Notification"/>
 </LinearLayout>
