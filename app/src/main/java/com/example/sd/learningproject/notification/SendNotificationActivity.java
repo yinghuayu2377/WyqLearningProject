@@ -54,6 +54,9 @@ public class SendNotificationActivity extends AppCompatActivity {
                         .setWhen(System.currentTimeMillis())
                         .setSmallIcon(R.mipmap.ic_launcher)
                         .setContentIntent(pendingIntent)
+                        .setStyle(new NotificationCompat.BigTextStyle().bigText("sadsdsdsadsdasdsadsdsdsadsdwedwedededed" +
+                                "edededewdededewdededsadsads"))  // 通知中显示长文字
+                        .setPriority(NotificationCompat.PRIORITY_MAX)  // 设置通知的重要程度
                         .setAutoCancel(true)  // 对通知图标进行取消  // 或者在点击进入的页面中执行  NotificationManager manager
                         // = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);manager.cancel(1),1为之前传入的通知id
                         .build();
