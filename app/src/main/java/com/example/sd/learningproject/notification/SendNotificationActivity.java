@@ -3,6 +3,8 @@ package com.example.sd.learningproject.notification;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
@@ -41,6 +43,9 @@ public class SendNotificationActivity extends AppCompatActivity {
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
+                Intent intent = new Intent(this, SendNotificationActivity.class);
+                PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
                 NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 createNotificationChannel(CHANNEL_ID, CHANNEL_NAME);
                 Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
@@ -48,6 +53,9 @@ public class SendNotificationActivity extends AppCompatActivity {
                         .setContentText("This is notification text")
                         .setWhen(System.currentTimeMillis())
                         .setSmallIcon(R.mipmap.ic_launcher)
+                        .setContentIntent(pendingIntent)
+                        .setAutoCancel(true)  // 对通知图标进行取消  // 或者在点击进入的页面中执行  NotificationManager manager
+                        // = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);manager.cancel(1),1为之前传入的通知id
                         .build();
                 manager.notify(1, notification);
                 break;
@@ -58,7 +66,7 @@ public class SendNotificationActivity extends AppCompatActivity {
      * 8.0及以上需要创建创建通知渠道
      */
     private void createNotificationChannel(String channelId, String channelName) {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {  // 26以上需要添加通知渠道
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {  // 26以上需要添加通知渠道
             NotificationChannel channel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT);
             channel.setDescription(channelName);
             NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
