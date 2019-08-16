@@ -30,17 +30,21 @@ public class ContentProviderStartActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         mButton1.setText(getString(R.string.text_button_read_system_contacts));
-        mButton2.setVisibility(View.GONE);
+        mButton2.setText(getString(R.string.text_button_get_data_from_other_app));
         mButton3.setVisibility(View.GONE);
         mButton4.setVisibility(View.GONE);
         mButton5.setVisibility(View.GONE);
     }
 
-    @OnClick({R.id.button1})
+    @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
                 gotoActivity(ReadSystemContactsActivity.class);
+                break;
+
+            case R.id.button2:
+                gotoActivity(ContentProviderActivity.class);
                 break;
         }
     }

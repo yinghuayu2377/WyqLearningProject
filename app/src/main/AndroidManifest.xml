@@ -105,6 +105,13 @@
         <activity android:name=".menu.PopupMenuActivity" />
         <activity android:name=".contentProvider.ContentProviderStartActivity" />
         <activity android:name=".contentProvider.ReadSystemContactsActivity" />
+        <activity android:name=".contentProvider.ContentProviderActivity" />
+        <provider
+            android:authorities="com.example.sd.learningproject.provider"
+            android:name=".contentProvider.MyContentProvider"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>
