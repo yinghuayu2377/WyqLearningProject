@@ -114,6 +114,7 @@
         </provider>
         <activity android:name=".notification.SendNotificationActivity" />
         <activity android:name=".notification.NotificationStartActivity" />
+        <activity android:name=".recyclerview.complexrecyclerview.ComplexRecyclerViewActivity" />
     </application>
 
 </manifest>
