@@ -1,4 +1,4 @@
-package com.example.sd.learningproject.notification;
+package com.example.sd.learningproject.multimedia;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ public class NotificationStartActivity extends AppCompatActivity {
 
     @BindView(R.id.button1)
     Button mButton1;
+    @BindView(R.id.button2)
+    Button mButton2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,13 +26,19 @@ public class NotificationStartActivity extends AppCompatActivity {
 
         mButton1.setVisibility(View.VISIBLE);
         mButton1.setText(getString(R.string.text_button_send_notification));
+        mButton2.setVisibility(View.VISIBLE);
+        mButton2.setText(getString(R.string.text_choose_picture_and_camera));
     }
 
-    @OnClick({R.id.button1})
+    @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
                 gotoActivity(SendNotificationActivity.class);
+                break;
+
+            case R.id.button2:
+                gotoActivity(CameraAndChoosePhotoActivity.class);
                 break;
         }
     }

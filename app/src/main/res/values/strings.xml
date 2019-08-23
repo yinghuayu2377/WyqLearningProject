@@ -54,4 +54,8 @@
     <string name="text_button_read_system_contacts">读取系统联系人</string>
     <string name="text_button_get_data_from_other_app">与其他应用进行数据交换</string>
     <string name="text_button_send_notification">发送通知</string>
+    <string name="text_button_use_mobile_multimedia">运用手机多媒体</string>
+    <string name="text_choose_picture_and_camera">拍照及选择图片</string>
+    <string name="text_camera">拍照</string>
+    <string name="text_choose_photo">选择照片</string>
 </resources>

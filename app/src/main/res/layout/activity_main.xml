@@ -96,5 +96,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Notification"/>
+        android:text="@string/text_button_use_mobile_multimedia"/>
 </LinearLayout>

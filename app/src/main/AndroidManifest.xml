@@ -112,9 +112,19 @@
             android:enabled="true"
             android:exported="true">
         </provider>
-        <activity android:name=".notification.SendNotificationActivity" />
-        <activity android:name=".notification.NotificationStartActivity" />
+        <activity android:name=".multimedia.SendNotificationActivity" />
+        <activity android:name=".multimedia.NotificationStartActivity" />
+        <activity android:name=".multimedia.CameraAndChoosePhotoActivity" />
         <activity android:name=".recyclerview.complexrecyclerview.ComplexRecyclerViewActivity" />
+        <provider
+            android:authorities="com.example.sd.learningproject.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

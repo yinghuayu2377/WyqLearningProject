@@ -13,7 +13,7 @@ import com.example.sd.learningproject.intent.Intent1Activity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.listview.ListViewActivity;
 import com.example.sd.learningproject.menu.MenuStartActivity;
-import com.example.sd.learningproject.notification.NotificationStartActivity;
+import com.example.sd.learningproject.multimedia.NotificationStartActivity;
 import com.example.sd.learningproject.permission.PermissionActivity;
 import com.example.sd.learningproject.recyclerview.RecyclerViewStartActivity;
 import com.example.sd.learningproject.storage.StorageActivity;
