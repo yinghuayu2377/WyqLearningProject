@@ -1,6 +1,7 @@
 package com.example.sd.learningproject.multimedia;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -12,6 +13,7 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -30,6 +32,7 @@ public class CameraAndChoosePhotoActivity extends AppCompatActivity {
     ImageView mImageView;
 
     private static final int TAKE_PHOTO = 1;
+    private static final int CHOOSE_PHOTO = 2;
     private Uri mImageUri;
 
     @Override
@@ -42,7 +45,7 @@ public class CameraAndChoosePhotoActivity extends AppCompatActivity {
     @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
-            case R.id.button1:  // 拍照
+            case R.id.button1:  // 拍照,这里使用ContentProvider来获取图片
                 File outputImage = new File(getExternalCacheDir(), "output_iamge.jpg");  // 放入此目录不需要读写SD卡的权限
                 try {
                     if (outputImage.exists()) {
@@ -59,13 +62,15 @@ public class CameraAndChoosePhotoActivity extends AppCompatActivity {
                     mImageUri = Uri.fromFile(outputImage);
                 }
                 // 启动相机
-                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");  // 前边需要进行权限验证
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);  // 前边需要进行权限验证
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, mImageUri);
                 startActivityForResult(intent, TAKE_PHOTO);
                 break;
 
-            case R.id.button2:
-
+            case R.id.button2:  // 需要先进行权限判断，不使用ContentProvider来获取图片
+                Intent intent1 = new Intent(Intent.ACTION_GET_CONTENT);
+                intent1.setType("image/*");
+                startActivityForResult(intent1, CHOOSE_PHOTO);
                 break;
         }
     }
@@ -73,15 +78,43 @@ public class CameraAndChoosePhotoActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
-            case TAKE_PHOTO:
-                try {
-                    Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(mImageUri));
-                    mImageView.setImageBitmap(bitmap);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                break;
+        if (resultCode == RESULT_OK) {
+            switch (requestCode) {
+                case TAKE_PHOTO:
+                    try {
+                        Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(mImageUri));
+                        mImageView.setImageBitmap(bitmap);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case CHOOSE_PHOTO:
+                    if (data != null) {
+                        handleImageBeforeKitkat(data);
+                    }
+                    break;
+            }
+        }
+    }
+
+    private void handleImageBeforeKitkat(Intent intent) {
+        String imagePath = intent.getDataString();
+        Uri uri = intent.getData();
+        if (imagePath != null) {
+            displayImage(uri);
+        }
+    }
+
+    private void displayImage(Uri uri) {
+        if (uri != null) {
+            try {
+                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
+                mImageView.setImageBitmap(bitmap);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Toast.makeText(this, "failed to get image", Toast.LENGTH_SHORT).show();
         }
     }
 }
