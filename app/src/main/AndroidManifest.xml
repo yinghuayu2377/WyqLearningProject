@@ -126,6 +126,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
         <activity android:name=".multimedia.PlayAudioActivity" />
+        <activity android:name=".multimedia.PlayVideoActivity" />
     </application>
 
 </manifest>
