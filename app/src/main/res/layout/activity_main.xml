@@ -1,100 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/webview_button"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="webview"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/menu_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="menu"/>
+        <Button
+            android:id="@+id/webview_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="webview" />
 
-    <Button
-        android:id="@+id/intent_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="intent"/>
+        <Button
+            android:id="@+id/menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="menu" />
 
-    <Button
-        android:id="@+id/life_cycle_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="生命周期"/>
+        <Button
+            android:id="@+id/intent_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="intent" />
 
-    <Button
-        android:id="@+id/widget_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="widget"/>
+        <Button
+            android:id="@+id/life_cycle_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="生命周期" />
 
-    <Button
-        android:id="@+id/list_view_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="ListView"/>
+        <Button
+            android:id="@+id/widget_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="widget" />
 
-    <Button
-        android:id="@+id/recycler_view_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="RecyclerView"/>
+        <Button
+            android:id="@+id/list_view_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="ListView" />
 
-    <Button
-        android:id="@+id/fragment_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="fragment"/>
+        <Button
+            android:id="@+id/recycler_view_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="RecyclerView" />
 
-    <Button
-        android:id="@+id/broadcast_receiver_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Broadcast Receiver"/>
+        <Button
+            android:id="@+id/fragment_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="fragment" />
 
-    <Button
-        android:id="@+id/memory_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="保存数据"/>
+        <Button
+            android:id="@+id/broadcast_receiver_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Broadcast Receiver" />
 
-    <Button
-        android:id="@+id/dynamic_apply_permission_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="动态申请权限"/>
+        <Button
+            android:id="@+id/memory_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="保存数据" />
 
-    <Button
-        android:id="@+id/content_resolver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="内容提供器 Content Resolver"/>
+        <Button
+            android:id="@+id/dynamic_apply_permission_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="动态申请权限" />
 
-    <Button
-        android:id="@+id/notification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="@string/text_button_use_mobile_multimedia"/>
-</LinearLayout>
+        <Button
+            android:id="@+id/content_resolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="内容提供器 Content Resolver" />
+
+        <Button
+            android:id="@+id/notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/text_button_use_mobile_multimedia" />
+
+        <Button
+            android:id="@+id/advance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="进阶" />
+
+    </LinearLayout>
+</ScrollView>

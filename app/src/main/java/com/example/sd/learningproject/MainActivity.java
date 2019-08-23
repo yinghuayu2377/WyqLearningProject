@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.example.sd.learningproject.advance.AdvanceActivity;
 import com.example.sd.learningproject.broadcastreceiver.BroadcastReceiverStartActivity;
 import com.example.sd.learningproject.contentProvider.ContentProviderStartActivity;
 import com.example.sd.learningproject.fragment.FragmentStartActivity;
@@ -33,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button,
             R.id.list_view_button, R.id.recycler_view_button, R.id.fragment_button, R.id.broadcast_receiver_button,
-            R.id.memory_button, R.id.dynamic_apply_permission_button, R.id.content_resolver, R.id.notification})
+            R.id.memory_button, R.id.dynamic_apply_permission_button, R.id.content_resolver, R.id.notification,
+            R.id.advance})
     void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
@@ -86,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.notification:
                 gotoOtherActivity(NotificationStartActivity.class);
+                break;
+
+            case R.id.advance:
+                gotoOtherActivity(AdvanceActivity.class);
                 break;
         }
     }

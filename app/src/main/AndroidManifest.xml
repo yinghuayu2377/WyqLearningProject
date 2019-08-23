@@ -127,6 +127,8 @@
         </provider>
         <activity android:name=".multimedia.PlayAudioActivity" />
         <activity android:name=".multimedia.PlayVideoActivity" />
+        <activity android:name=".advance.extra.SerializableActivity" />
+        <activity android:name=".advance.AdvanceActivity" />
     </application>
 
 </manifest>
