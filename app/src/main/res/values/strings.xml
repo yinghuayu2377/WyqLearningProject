@@ -58,4 +58,8 @@
     <string name="text_choose_picture_and_camera">拍照及选择图片</string>
     <string name="text_camera">拍照</string>
     <string name="text_choose_photo">选择照片</string>
+    <string name="text_play">播放</string>
+    <string name="text_stop">停止</string>
+    <string name="text_pause">暂停</string>
+    <string name="text_play_audio">播放音频</string>
 </resources>

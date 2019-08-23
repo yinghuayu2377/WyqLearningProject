@@ -17,6 +17,8 @@ public class NotificationStartActivity extends AppCompatActivity {
     Button mButton1;
     @BindView(R.id.button2)
     Button mButton2;
+    @BindView(R.id.button3)
+    Button mButton3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,9 +30,11 @@ public class NotificationStartActivity extends AppCompatActivity {
         mButton1.setText(getString(R.string.text_button_send_notification));
         mButton2.setVisibility(View.VISIBLE);
         mButton2.setText(getString(R.string.text_choose_picture_and_camera));
+        mButton3.setVisibility(View.VISIBLE);
+        mButton3.setText(getString(R.string.text_play_audio));
     }
 
-    @OnClick({R.id.button1, R.id.button2})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -39,6 +43,10 @@ public class NotificationStartActivity extends AppCompatActivity {
 
             case R.id.button2:
                 gotoActivity(CameraAndChoosePhotoActivity.class);
+                break;
+
+            case R.id.button3:
+                gotoActivity(PlayAudioActivity.class);
                 break;
         }
     }
