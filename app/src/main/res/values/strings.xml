@@ -65,4 +65,5 @@
     <string name="text_play_audio">播放音频</string>
     <string name="text_play_video">播放视频</string>
     <string name="text_put_serializable">使用Serializable接口实现传递自定义数据</string>
+    <string name="text_put_parcelable">使用parcelable接口实现传递自定义数据</string>
 </resources>

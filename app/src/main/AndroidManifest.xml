@@ -129,6 +129,7 @@
         <activity android:name=".multimedia.PlayVideoActivity" />
         <activity android:name=".advance.extra.SerializableActivity" />
         <activity android:name=".advance.AdvanceActivity" />
+        <activity android:name=".advance.extra.ParcelableActivity" />
     </application>
 
 </manifest>

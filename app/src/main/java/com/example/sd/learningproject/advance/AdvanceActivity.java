@@ -10,6 +10,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
+import com.example.sd.learningproject.advance.extra.ParcelableActivity;
+import com.example.sd.learningproject.advance.extra.ParcelablePerson;
 import com.example.sd.learningproject.advance.extra.Person;
 import com.example.sd.learningproject.advance.extra.SerializableActivity;
 
@@ -19,6 +21,8 @@ import com.example.sd.learningproject.advance.extra.SerializableActivity;
 public class AdvanceActivity extends AppCompatActivity {
     @BindView(R.id.button1)
     Button mButton1;
+    @BindView(R.id.button2)
+    Button mButton2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,10 +32,11 @@ public class AdvanceActivity extends AppCompatActivity {
 
         mButton1.setVisibility(View.VISIBLE);
         mButton1.setText(getString(R.string.text_put_serializable));
-
+        mButton2.setVisibility(View.VISIBLE);
+        mButton2.setText(getString(R.string.text_put_parcelable));
     }
 
-    @OnClick({R.id.button1})
+    @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -41,6 +46,15 @@ public class AdvanceActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, SerializableActivity.class);
                 intent.putExtra("data1", person);
                 startActivity(intent);
+                break;
+
+            case R.id.button2:
+                ParcelablePerson person1 = new ParcelablePerson();
+                person1.setName("mantianxing");
+                person1.setAge(20);
+                Intent intent1 = new Intent(this, ParcelableActivity.class);
+                intent1.putExtra("data2", person1);
+                startActivity(intent1);
                 break;
         }
     }
