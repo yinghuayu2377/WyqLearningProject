@@ -18,6 +18,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -130,6 +131,8 @@
         <activity android:name=".advance.extra.SerializableActivity" />
         <activity android:name=".advance.AdvanceActivity" />
         <activity android:name=".advance.extra.ParcelableActivity" />
+        <activity android:name=".internet.InternetStartActivity" />
+        <activity android:name=".internet.HttpUrlConnectionActivity" />
     </application>
 
 </manifest>

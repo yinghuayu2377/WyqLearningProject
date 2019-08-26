@@ -11,6 +11,7 @@ import com.example.sd.learningproject.broadcastreceiver.BroadcastReceiverStartAc
 import com.example.sd.learningproject.contentProvider.ContentProviderStartActivity;
 import com.example.sd.learningproject.fragment.FragmentStartActivity;
 import com.example.sd.learningproject.intent.Intent1Activity;
+import com.example.sd.learningproject.internet.InternetStartActivity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.listview.ListViewActivity;
 import com.example.sd.learningproject.menu.MenuStartActivity;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button,
             R.id.list_view_button, R.id.recycler_view_button, R.id.fragment_button, R.id.broadcast_receiver_button,
             R.id.memory_button, R.id.dynamic_apply_permission_button, R.id.content_resolver, R.id.notification,
-            R.id.advance})
+            R.id.advance, R.id.internet})
     void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
@@ -92,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.advance:
                 gotoOtherActivity(AdvanceActivity.class);
+                break;
+
+            case R.id.internet:
+                gotoOtherActivity(InternetStartActivity.class);
                 break;
         }
     }

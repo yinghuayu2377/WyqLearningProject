@@ -109,5 +109,11 @@
             android:textAllCaps="false"
             android:text="进阶" />
 
+        <Button
+            android:id="@+id/internet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Internet" />
+
     </LinearLayout>
 </ScrollView>
