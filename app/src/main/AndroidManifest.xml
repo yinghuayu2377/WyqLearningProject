@@ -107,16 +107,18 @@
         <activity android:name=".contentProvider.ContentProviderStartActivity" />
         <activity android:name=".contentProvider.ReadSystemContactsActivity" />
         <activity android:name=".contentProvider.ContentProviderActivity" />
+
         <provider
             android:authorities="com.example.sd.learningproject.provider"
             android:name=".contentProvider.MyContentProvider"
             android:enabled="true"
-            android:exported="true">
-        </provider>
+            android:exported="true"></provider>
+
         <activity android:name=".multimedia.SendNotificationActivity" />
         <activity android:name=".multimedia.NotificationStartActivity" />
         <activity android:name=".multimedia.CameraAndChoosePhotoActivity" />
         <activity android:name=".recyclerview.complexrecyclerview.ComplexRecyclerViewActivity" />
+
         <provider
             android:authorities="com.example.sd.learningproject.fileprovider"
             android:name="android.support.v4.content.FileProvider"
@@ -126,6 +128,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
         <activity android:name=".multimedia.PlayAudioActivity" />
         <activity android:name=".multimedia.PlayVideoActivity" />
         <activity android:name=".advance.extra.SerializableActivity" />
@@ -134,6 +137,7 @@
         <activity android:name=".internet.InternetStartActivity" />
         <activity android:name=".internet.HttpUrlConnectionActivity" />
         <activity android:name=".internet.OkHttpActivity" />
+        <activity android:name=".internet.ParseXmlActivity" />
     </application>
 
 </manifest>

@@ -68,4 +68,5 @@
     <string name="text_put_parcelable">使用parcelable接口实现传递自定义数据</string>
     <string name="text_http_url_connection">HttpURLConnection</string>
     <string name="text_ok_http">OkHttp</string>
+    <string name="text_pull_parse_xml">使用Pull解析xml</string>
 </resources>

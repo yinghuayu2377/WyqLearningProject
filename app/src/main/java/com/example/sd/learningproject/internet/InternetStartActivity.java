@@ -16,6 +16,8 @@ public class InternetStartActivity extends AppCompatActivity {
     Button mButton1;
     @BindView(R.id.button2)
     Button mButton2;
+    @BindView(R.id.button3)
+    Button mButton3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,9 +29,11 @@ public class InternetStartActivity extends AppCompatActivity {
         mButton1.setText(getString(R.string.text_http_url_connection));
         mButton2.setVisibility(View.VISIBLE);
         mButton2.setText(getString(R.string.text_ok_http));
+        mButton3.setVisibility(View.VISIBLE);
+        mButton3.setText(getString(R.string.text_pull_parse_xml));
     }
 
-    @OnClick({R.id.button1, R.id.button2})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -38,6 +42,10 @@ public class InternetStartActivity extends AppCompatActivity {
 
             case R.id.button2:
                 gotoActivity(OkHttpActivity.class);
+                break;
+
+            case R.id.button3:
+                gotoActivity(ParseXmlActivity.class);
                 break;
         }
     }
