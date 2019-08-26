@@ -18,6 +18,8 @@ public class InternetStartActivity extends AppCompatActivity {
     Button mButton2;
     @BindView(R.id.button3)
     Button mButton3;
+    @BindView(R.id.button4)
+    Button mButton4;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,9 +33,11 @@ public class InternetStartActivity extends AppCompatActivity {
         mButton2.setText(getString(R.string.text_ok_http));
         mButton3.setVisibility(View.VISIBLE);
         mButton3.setText(getString(R.string.text_pull_parse_xml));
+        mButton4.setVisibility(View.VISIBLE);
+        mButton4.setText(getString(R.string.text_sax_parse_xml));
     }
 
-    @OnClick({R.id.button1, R.id.button2, R.id.button3})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -45,7 +49,11 @@ public class InternetStartActivity extends AppCompatActivity {
                 break;
 
             case R.id.button3:
-                gotoActivity(ParseXmlActivity.class);
+                gotoActivity(PullParseXmlActivity.class);
+                break;
+
+            case R.id.button4:
+                gotoActivity(SaxParseXmlActivity.class);
                 break;
         }
     }

@@ -137,7 +137,8 @@
         <activity android:name=".internet.InternetStartActivity" />
         <activity android:name=".internet.HttpUrlConnectionActivity" />
         <activity android:name=".internet.OkHttpActivity" />
-        <activity android:name=".internet.ParseXmlActivity" />
+        <activity android:name=".internet.PullParseXmlActivity" />
+        <activity android:name=".internet.SaxParseXmlActivity" />
     </application>
 
 </manifest>

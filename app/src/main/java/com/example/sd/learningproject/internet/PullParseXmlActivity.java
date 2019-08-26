@@ -5,8 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
@@ -18,10 +16,10 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.StringReader;
 
-public class ParseXmlActivity extends AppCompatActivity {
-
-    @BindView(R.id.text_view)
-    TextView mTextView;
+/**
+ * 使用Pull方式解析xml
+ */
+public class PullParseXmlActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,7 +56,15 @@ public class ParseXmlActivity extends AppCompatActivity {
         }).start();
     }
 
-    // 使用Pull解析xml
+    /**
+     * 使用Pull解析xml
+     * xml结构为:
+     * <resp>
+     *   <city>北京</city>
+     *   <updatetime>14:55</updatetime>
+     *   <wendu>25</wendu>
+     * </resp>
+     */
     private void parseXml(String xmlData) {
         try {
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();

@@ -69,4 +69,5 @@
     <string name="text_http_url_connection">HttpURLConnection</string>
     <string name="text_ok_http">OkHttp</string>
     <string name="text_pull_parse_xml">使用Pull解析xml</string>
+    <string name="text_sax_parse_xml">使用SAX解析xml</string>
 </resources>
