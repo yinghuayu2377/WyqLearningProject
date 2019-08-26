@@ -14,6 +14,8 @@ import com.example.sd.learningproject.R;
 public class InternetStartActivity extends AppCompatActivity {
     @BindView(R.id.button1)
     Button mButton1;
+    @BindView(R.id.button2)
+    Button mButton2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,13 +25,19 @@ public class InternetStartActivity extends AppCompatActivity {
 
         mButton1.setVisibility(View.VISIBLE);
         mButton1.setText(getString(R.string.text_http_url_connection));
+        mButton2.setVisibility(View.VISIBLE);
+        mButton2.setText(getString(R.string.text_ok_http));
     }
 
-    @OnClick({R.id.button1})
+    @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
                 gotoActivity(HttpUrlConnectionActivity.class);
+                break;
+
+            case R.id.button2:
+                gotoActivity(OkHttpActivity.class);
                 break;
         }
     }

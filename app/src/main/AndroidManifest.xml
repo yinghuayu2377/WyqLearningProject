@@ -133,6 +133,7 @@
         <activity android:name=".advance.extra.ParcelableActivity" />
         <activity android:name=".internet.InternetStartActivity" />
         <activity android:name=".internet.HttpUrlConnectionActivity" />
+        <activity android:name=".internet.OkHttpActivity" />
     </application>
 
 </manifest>
