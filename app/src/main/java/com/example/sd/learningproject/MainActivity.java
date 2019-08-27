@@ -15,6 +15,7 @@ import com.example.sd.learningproject.internet.InternetStartActivity;
 import com.example.sd.learningproject.lifecycle.LifeCycleActivity;
 import com.example.sd.learningproject.listview.ListViewActivity;
 import com.example.sd.learningproject.location.LocationActivity;
+import com.example.sd.learningproject.location.LocationStartActivity;
 import com.example.sd.learningproject.menu.MenuStartActivity;
 import com.example.sd.learningproject.multimedia.NotificationStartActivity;
 import com.example.sd.learningproject.permission.PermissionActivity;
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.location:
-                gotoOtherActivity(LocationActivity.class);
+                gotoOtherActivity(LocationStartActivity.class);
                 break;
         }
     }

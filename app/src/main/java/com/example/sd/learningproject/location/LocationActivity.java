@@ -21,6 +21,9 @@ import com.example.sd.learningproject.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 定位
+ */
 public class LocationActivity extends AppCompatActivity {
 
     @BindView(R.id.text_view)

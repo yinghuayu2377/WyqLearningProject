@@ -154,6 +154,9 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="a5DYGzArocBc4fYbxyztgfmMvPhSQDmh" />
+
+        <activity android:name=".location.LocationStartActivity" />
+        <activity android:name=".location.BaiduMapActivity" />
     </application>
 
 </manifest>
