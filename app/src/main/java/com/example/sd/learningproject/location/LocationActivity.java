@@ -15,6 +15,7 @@ import butterknife.ButterKnife;
 import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
 import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
 import com.example.sd.learningproject.R;
 
 import java.util.ArrayList;
@@ -36,6 +37,12 @@ public class LocationActivity extends AppCompatActivity {
         mLocationClient = new LocationClient(getApplicationContext());
         mLocationClient.registerLocationListener(new MyLocationListener());
         checkPermission();
+    }
+
+    private void initLocation() {
+        LocationClientOption option = new LocationClientOption();
+        option.setScanSpan(5000);  // 每5秒更新一下位置
+        mLocationClient.setLocOption(option);
     }
 
     private void checkPermission() {
@@ -60,6 +67,7 @@ public class LocationActivity extends AppCompatActivity {
     }
 
     private void requestLocation() {
+        initLocation();
         mLocationClient.start();
     }
 
@@ -97,4 +105,9 @@ public class LocationActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mLocationClient.stop();
+    }
 }
