@@ -42,6 +42,11 @@ public class LocationActivity extends AppCompatActivity {
     private void initLocation() {
         LocationClientOption option = new LocationClientOption();
         option.setScanSpan(5000);  // 每5秒更新一下位置
+        option.setLocationMode(LocationClientOption.LocationMode.Device_Sensors);  // 设置传感器模式，只能进行GPS定位
+        // High_Accuracy高精度模式，优先使用GPS定位，无法接受到GPS信号时使用网络定位；
+        // Battery_Saving节电模式，只使用网络定位；
+        // Device_Sensors传感器模式，只使用GPS定位
+        option.setIsNeedAddress(true);  // 需要地址的详细信息,获取地址信息需要用到网络
         mLocationClient.setLocOption(option);
     }
 
@@ -95,6 +100,11 @@ public class LocationActivity extends AppCompatActivity {
             StringBuilder currentPosition = new StringBuilder();
             currentPosition.append("维度：").append(bdLocation.getLatitude()).append("\n");
             currentPosition.append("经线：").append(bdLocation.getLongitude()).append("\n");
+            currentPosition.append("国家：").append(bdLocation.getCountry()).append("\n");
+            currentPosition.append("省：").append(bdLocation.getProvince()).append("\n");
+            currentPosition.append("市：").append(bdLocation.getCity()).append("\n");
+            currentPosition.append("区：").append(bdLocation.getDistrict()).append("\n");
+            currentPosition.append("街道：").append(bdLocation.getStreet()).append("\n");
             currentPosition.append("定位方式：");
             if (bdLocation.getLocType() == BDLocation.TypeGpsLocation) {
                 currentPosition.append("GPS");
