@@ -121,5 +121,11 @@
             android:layout_height="wrap_content"
             android:text="Location" />
 
+        <Button
+            android:id="@+id/service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="service" />
+
     </LinearLayout>
 </ScrollView>

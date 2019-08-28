@@ -157,6 +157,8 @@
 
         <activity android:name=".location.LocationStartActivity" />
         <activity android:name=".location.BaiduMapActivity" />
+        <activity android:name=".service.ServiceStartActivity" />
+        <activity android:name=".service.ThreadActivity" />
     </application>
 
 </manifest>

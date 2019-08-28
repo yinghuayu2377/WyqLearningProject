@@ -20,6 +20,7 @@ import com.example.sd.learningproject.menu.MenuStartActivity;
 import com.example.sd.learningproject.multimedia.NotificationStartActivity;
 import com.example.sd.learningproject.permission.PermissionActivity;
 import com.example.sd.learningproject.recyclerview.RecyclerViewStartActivity;
+import com.example.sd.learningproject.service.ServiceStartActivity;
 import com.example.sd.learningproject.storage.StorageActivity;
 import com.example.sd.learningproject.webView.WebViewActivity;
 import com.example.sd.learningproject.widget.NormalWidgetActivity;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.webview_button, R.id.menu_button, R.id.intent_button, R.id.life_cycle_button, R.id.widget_button,
             R.id.list_view_button, R.id.recycler_view_button, R.id.fragment_button, R.id.broadcast_receiver_button,
             R.id.memory_button, R.id.dynamic_apply_permission_button, R.id.content_resolver, R.id.notification,
-            R.id.advance, R.id.internet, R.id.location})
+            R.id.advance, R.id.internet, R.id.location, R.id.service})
     void clickButton(View v) {
         switch (v.getId()) {
             case R.id.webview_button:
@@ -103,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.location:
                 gotoOtherActivity(LocationStartActivity.class);
+                break;
+
+            case R.id.service:
+                gotoOtherActivity(ServiceStartActivity.class);
                 break;
         }
     }

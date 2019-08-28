@@ -72,4 +72,5 @@
     <string name="text_sax_parse_xml">使用SAX解析xml</string>
     <string name="text_location">定位</string>
     <string name="text_baidu_map">地图</string>
+    <string name="text_asynchronization_thread">异步消息处理机制</string>
 </resources>
