@@ -159,6 +159,7 @@
         <activity android:name=".location.BaiduMapActivity" />
         <activity android:name=".service.ServiceStartActivity" />
         <activity android:name=".service.ThreadActivity" />
+        <activity android:name=".service.AsyncTaskActivity" />
     </application>
 
 </manifest>

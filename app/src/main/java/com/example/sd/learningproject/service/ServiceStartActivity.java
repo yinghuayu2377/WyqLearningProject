@@ -15,6 +15,8 @@ public class ServiceStartActivity extends AppCompatActivity {
 
     @BindView(R.id.button1)
     Button mButton1;
+    @BindView(R.id.button2)
+    Button mButton2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,13 +26,19 @@ public class ServiceStartActivity extends AppCompatActivity {
 
         mButton1.setVisibility(View.VISIBLE);
         mButton1.setText(getString(R.string.text_asynchronization_thread));
+        mButton2.setVisibility(View.VISIBLE);
+        mButton2.setText(getString(R.string.text_async_task));
     }
 
-    @OnClick({R.id.button1})
+    @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
                 gotoActivity(ThreadActivity.class);
+                break;
+
+            case R.id.button2:
+                gotoActivity(AsyncTaskActivity.class);
                 break;
         }
     }
