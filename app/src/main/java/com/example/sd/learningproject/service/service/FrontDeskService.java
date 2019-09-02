@@ -36,6 +36,17 @@ public class FrontDeskService extends Service {
         startForeground(1, notification);
     }
 
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // 耗时操作在这里执行
+            }
+        }).start();
+        return super.onStartCommand(intent, flags, startId);
+    }
+
     /**
      * 8.0及以上需要创建创建通知渠道
      */
