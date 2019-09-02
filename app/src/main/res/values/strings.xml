@@ -76,4 +76,6 @@
     <string name="text_async_task">通过AsyncTask实现异步消息处理</string>
     <string name="text_service">Service</string>
     <string name="text_start">开始</string>
+    <string name="text_bind_service">绑定service</string>
+    <string name="text_unbind_service">解绑service</string>
 </resources>

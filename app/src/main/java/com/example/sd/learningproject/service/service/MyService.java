@@ -2,11 +2,13 @@ package com.example.sd.learningproject.service.service;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
 public class MyService extends Service {
     private static String TAG = "MyService";
+    private DownloadBinder mBinder = new DownloadBinder();
 
     public MyService() {
 
@@ -32,6 +34,17 @@ public class MyService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
+        return mBinder;
+    }
+
+    class DownloadBinder extends Binder {
+        public void startDownload() {
+            Log.e(TAG, "startDownload");
+        }
+
+        public int getProgress() {
+            Log.e(TAG, "getProgress");
+            return 0;
+        }
     }
 }
