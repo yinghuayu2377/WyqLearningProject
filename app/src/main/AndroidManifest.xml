@@ -165,6 +165,10 @@
             android:exported="true">
         </service>
         <activity android:name=".service.service.MyServiceActivity" />
+        <activity android:name=".service.service.FrontDeskServiceActivity" />
+        <service android:name=".service.service.FrontDeskService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
+import com.example.sd.learningproject.service.service.FrontDeskServiceActivity;
 import com.example.sd.learningproject.service.service.MyServiceActivity;
 import com.example.sd.learningproject.service.thread.AsyncTaskActivity;
 import com.example.sd.learningproject.service.thread.ThreadActivity;
@@ -22,6 +23,8 @@ public class ServiceStartActivity extends AppCompatActivity {
     Button mButton2;
     @BindView(R.id.button3)
     Button mButton3;
+    @BindView(R.id.button4)
+    Button mButton4;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,9 +38,11 @@ public class ServiceStartActivity extends AppCompatActivity {
         mButton2.setText(getString(R.string.text_async_task));
         mButton3.setVisibility(View.VISIBLE);
         mButton3.setText(getString(R.string.text_service));
+        mButton4.setVisibility(View.VISIBLE);
+        mButton4.setText(getString(R.string.front_desk_service));
     }
 
-    @OnClick({R.id.button1, R.id.button2, R.id.button3})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -50,6 +55,10 @@ public class ServiceStartActivity extends AppCompatActivity {
 
             case R.id.button3:
                 gotoActivity(MyServiceActivity.class);
+                break;
+
+            case R.id.button4:
+                gotoActivity(FrontDeskServiceActivity.class);
                 break;
         }
     }

@@ -78,4 +78,5 @@
     <string name="text_start">开始</string>
     <string name="text_bind_service">绑定service</string>
     <string name="text_unbind_service">解绑service</string>
+    <string name="front_desk_service">前台service</string>
 </resources>
