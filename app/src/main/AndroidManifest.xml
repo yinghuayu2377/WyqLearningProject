@@ -158,8 +158,13 @@
         <activity android:name=".location.LocationStartActivity" />
         <activity android:name=".location.BaiduMapActivity" />
         <activity android:name=".service.ServiceStartActivity" />
-        <activity android:name=".service.ThreadActivity" />
-        <activity android:name=".service.AsyncTaskActivity" />
+        <activity android:name=".service.thread.ThreadActivity" />
+        <activity android:name=".service.thread.AsyncTaskActivity" />
+        <service android:name=".service.service.MyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <activity android:name=".service.service.MyServiceActivity" />
     </application>
 
 </manifest>

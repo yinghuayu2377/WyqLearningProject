@@ -1,4 +1,4 @@
-package com.example.sd.learningproject.service;
+package com.example.sd.learningproject.service.thread;
 
 import android.os.Bundle;
 import android.os.Handler;
