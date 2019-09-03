@@ -175,12 +175,16 @@
             android:exported="true" />
         <activity android:name=".service.service.IntentServiceActivity" />
         <service android:name=".service.service.MyIntentService" />
+
         <activity
             android:name=".materialdesign.toolbar.ToolBarActivity"
             android:theme="@style/ToolbarTheme"
-            android:label="toolbar"/>
+            android:label="toolbar" />
         <activity android:name=".materialdesign.MaterialDesignStartActivity" />
         <activity android:name=".materialdesign.button.SuspendButtonActivity" />
+        <activity
+            android:name=".materialdesign.drawerlayout.DrawerLayoutActivity"
+            android:theme="@style/ToolbarTheme" />
     </application>
 
 </manifest>
