@@ -177,7 +177,8 @@
         <service android:name=".service.service.MyIntentService" />
         <activity
             android:name=".materialdesign.toolbar.ToolBarActivity"
-            android:theme="@style/ToolbarTheme" />
+            android:theme="@style/ToolbarTheme"
+            android:label="toolbar"/>
         <activity android:name=".materialdesign.MaterialDesignStartActivity" />
     </application>
 
