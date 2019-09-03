@@ -81,4 +81,5 @@
     <string name="front_desk_service">前台service</string>
     <string name="text_intent_service">通过IntentService实现Service</string>
     <string name="text_tool_bar_activity">Toolbar</string>
+    <string name="text_suspend_button">悬浮按钮</string>
 </resources>

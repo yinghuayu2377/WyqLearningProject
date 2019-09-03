@@ -10,11 +10,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
+import com.example.sd.learningproject.materialdesign.button.SuspendButtonActivity;
 import com.example.sd.learningproject.materialdesign.toolbar.ToolBarActivity;
 
 public class MaterialDesignStartActivity extends AppCompatActivity {
     @BindView(R.id.button1)
     Button mButton1;
+    @BindView(R.id.button2)
+    Button mButton2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,19 +27,24 @@ public class MaterialDesignStartActivity extends AppCompatActivity {
 
         mButton1.setVisibility(View.VISIBLE);
         mButton1.setText(getString(R.string.text_tool_bar_activity));
+        mButton2.setVisibility(View.VISIBLE);
+        mButton2.setText(getString(R.string.text_suspend_button));
     }
 
-    @OnClick({R.id.button1})
+    @OnClick({R.id.button1, R.id.button2})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
                 gotoActivity(ToolBarActivity.class);
                 break;
+            case R.id.button2:
+                gotoActivity(SuspendButtonActivity.class);
+                break;
         }
-     }
+    }
 
-     private void gotoActivity(Class activity) {
+    private void gotoActivity(Class activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
-     }
+    }
 }

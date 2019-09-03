@@ -180,6 +180,7 @@
             android:theme="@style/ToolbarTheme"
             android:label="toolbar"/>
         <activity android:name=".materialdesign.MaterialDesignStartActivity" />
+        <activity android:name=".materialdesign.button.SuspendButtonActivity" />
     </application>
 
 </manifest>
