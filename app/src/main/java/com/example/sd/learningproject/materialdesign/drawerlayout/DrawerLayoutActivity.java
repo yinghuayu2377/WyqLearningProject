@@ -1,7 +1,9 @@
 package com.example.sd.learningproject.materialdesign.drawerlayout;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -20,6 +22,8 @@ public class DrawerLayoutActivity extends AppCompatActivity {
     DrawerLayout mDrawerLayout;
     @BindView(R.id.tool_bar)
     Toolbar mToolbar;
+    @BindView(R.id.nav_view)
+    NavigationView mNavView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +38,15 @@ public class DrawerLayoutActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
+
+        mNavView.setCheckedItem(R.id.nav_call);
+        mNavView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                mDrawerLayout.closeDrawers();
+                return true;
+            }
+        });
     }
 
     @Override
