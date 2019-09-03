@@ -160,17 +160,25 @@
         <activity android:name=".service.ServiceStartActivity" />
         <activity android:name=".service.thread.ThreadActivity" />
         <activity android:name=".service.thread.AsyncTaskActivity" />
-        <service android:name=".service.service.MyService"
+
+        <service
+            android:name=".service.service.MyService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true"></service>
+
         <activity android:name=".service.service.MyServiceActivity" />
         <activity android:name=".service.service.FrontDeskServiceActivity" />
-        <service android:name=".service.service.FrontDeskService"
+
+        <service
+            android:name=".service.service.FrontDeskService"
             android:enabled="true"
             android:exported="true" />
         <activity android:name=".service.service.IntentServiceActivity" />
         <service android:name=".service.service.MyIntentService" />
+        <activity
+            android:name=".materialdesign.toolbar.ToolBarActivity"
+            android:theme="@style/ToolbarTheme" />
+        <activity android:name=".materialdesign.MaterialDesignStartActivity" />
     </application>
 
 </manifest>
