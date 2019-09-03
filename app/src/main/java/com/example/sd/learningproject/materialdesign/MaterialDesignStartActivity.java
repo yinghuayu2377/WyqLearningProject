@@ -11,6 +11,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
 import com.example.sd.learningproject.materialdesign.button.SuspendButtonActivity;
+import com.example.sd.learningproject.materialdesign.cardview.CardViewActivity;
 import com.example.sd.learningproject.materialdesign.drawerlayout.DrawerLayoutActivity;
 import com.example.sd.learningproject.materialdesign.toolbar.ToolBarActivity;
 
@@ -21,6 +22,8 @@ public class MaterialDesignStartActivity extends AppCompatActivity {
     Button mButton2;
     @BindView(R.id.button3)
     Button mButton3;
+    @BindView(R.id.button4)
+    Button mButton4;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,9 +37,11 @@ public class MaterialDesignStartActivity extends AppCompatActivity {
         mButton2.setText(getString(R.string.text_suspend_button));
         mButton3.setVisibility(View.VISIBLE);
         mButton3.setText(getString(R.string.text_drawer_layout));
+        mButton4.setVisibility(View.VISIBLE);
+        mButton4.setText(getString(R.string.text_card_view));
     }
 
-    @OnClick({R.id.button1, R.id.button2, R.id.button3})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -47,6 +52,9 @@ public class MaterialDesignStartActivity extends AppCompatActivity {
                 break;
             case R.id.button3:
                 gotoActivity(DrawerLayoutActivity.class);
+                break;
+            case R.id.button4:
+                gotoActivity(CardViewActivity.class);
                 break;
         }
     }

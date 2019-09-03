@@ -83,4 +83,5 @@
     <string name="text_tool_bar_activity">Toolbar</string>
     <string name="text_suspend_button">悬浮按钮</string>
     <string name="text_drawer_layout">DrawerLayout</string>
+    <string name="text_card_view">CardView</string>
 </resources>
