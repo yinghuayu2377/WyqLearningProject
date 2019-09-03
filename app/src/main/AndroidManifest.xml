@@ -186,6 +186,7 @@
             android:name=".materialdesign.drawerlayout.DrawerLayoutActivity"
             android:theme="@style/ToolbarTheme" />
         <activity android:name=".materialdesign.cardview.CardViewActivity" />
+        <activity android:name=".materialdesign.swiperefreshlayout.SwipeRefreshLayoutActivity" />
     </application>
 
 </manifest>
