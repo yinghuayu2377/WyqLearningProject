@@ -86,4 +86,6 @@
     <string name="text_card_view">CardView</string>
     <string name="text_swipe_refresh">SwipeRefreshLayout</string>
     <string name="text_advance_time">定时任务</string>
+    <string name="text_lambda">Lambda表达式</string>
+    <string name="text_click">click</string>
 </resources>

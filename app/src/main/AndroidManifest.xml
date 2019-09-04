@@ -188,6 +188,7 @@
         <activity android:name=".materialdesign.cardview.CardViewActivity" />
         <activity android:name=".materialdesign.swiperefreshlayout.SwipeRefreshLayoutActivity" />
         <activity android:name=".advance.time.AlarmActivity" />
+        <activity android:name=".advance.LambdaActivity" />
     </application>
 
 </manifest>
