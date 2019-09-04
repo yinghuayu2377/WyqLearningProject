@@ -14,6 +14,7 @@ import com.example.sd.learningproject.advance.extra.ParcelableActivity;
 import com.example.sd.learningproject.advance.extra.ParcelablePerson;
 import com.example.sd.learningproject.advance.extra.Person;
 import com.example.sd.learningproject.advance.extra.SerializableActivity;
+import com.example.sd.learningproject.advance.time.AlarmActivity;
 
 /**
  * 进阶部分
@@ -23,6 +24,8 @@ public class AdvanceActivity extends AppCompatActivity {
     Button mButton1;
     @BindView(R.id.button2)
     Button mButton2;
+    @BindView(R.id.button3)
+    Button mButton3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,9 +37,11 @@ public class AdvanceActivity extends AppCompatActivity {
         mButton1.setText(getString(R.string.text_put_serializable));
         mButton2.setVisibility(View.VISIBLE);
         mButton2.setText(getString(R.string.text_put_parcelable));
+        mButton3.setVisibility(View.VISIBLE);
+        mButton3.setText(getString(R.string.text_advance_time));
     }
 
-    @OnClick({R.id.button1, R.id.button2})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -55,6 +60,11 @@ public class AdvanceActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(this, ParcelableActivity.class);
                 intent1.putExtra("data2", person1);
                 startActivity(intent1);
+                break;
+
+            case R.id.button3:
+                Intent intent2 = new Intent(this, AlarmActivity.class);
+                startActivity(intent2);
                 break;
         }
     }

@@ -187,6 +187,7 @@
             android:theme="@style/ToolbarTheme" />
         <activity android:name=".materialdesign.cardview.CardViewActivity" />
         <activity android:name=".materialdesign.swiperefreshlayout.SwipeRefreshLayoutActivity" />
+        <activity android:name=".advance.time.AlarmActivity" />
     </application>
 
 </manifest>

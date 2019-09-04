@@ -85,4 +85,5 @@
     <string name="text_drawer_layout">DrawerLayout</string>
     <string name="text_card_view">CardView</string>
     <string name="text_swipe_refresh">SwipeRefreshLayout</string>
+    <string name="text_advance_time">定时任务</string>
 </resources>
