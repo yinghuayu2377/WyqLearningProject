@@ -190,6 +190,7 @@
         <activity android:name=".advance.time.AlarmActivity" />
         <activity android:name=".advance.LambdaActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
+        <activity android:name=".internet.JsonActivity" />
     </application>
 
 </manifest>

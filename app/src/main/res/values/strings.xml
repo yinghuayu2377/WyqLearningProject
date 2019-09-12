@@ -88,4 +88,9 @@
     <string name="text_advance_time">定时任务</string>
     <string name="text_lambda">Lambda表达式</string>
     <string name="text_click">click</string>
+    <string name="text_json_list">将Json对象转换为列表</string>
+    <string name="text_json_object">将Json对象转换为对象</string>
+    <string name="text_json_map">将Json对象转换为Map</string>
+    <string name="text_json_gson">使用Gson处理json数据</string>
+    <string name="text_object_to_json">将对象转为json字符串</string>
 </resources>

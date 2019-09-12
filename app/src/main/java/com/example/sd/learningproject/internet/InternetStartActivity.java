@@ -20,6 +20,8 @@ public class InternetStartActivity extends AppCompatActivity {
     Button mButton3;
     @BindView(R.id.button4)
     Button mButton4;
+    @BindView(R.id.button5)
+    Button mButton5;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,9 +37,11 @@ public class InternetStartActivity extends AppCompatActivity {
         mButton3.setText(getString(R.string.text_pull_parse_xml));
         mButton4.setVisibility(View.VISIBLE);
         mButton4.setText(getString(R.string.text_sax_parse_xml));
+        mButton5.setVisibility(View.VISIBLE);
+        mButton5.setText(getString(R.string.text_json_gson));
     }
 
-    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5})
     void click(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -55,6 +59,9 @@ public class InternetStartActivity extends AppCompatActivity {
             case R.id.button4:
                 gotoActivity(SaxParseXmlActivity.class);
                 break;
+
+            case R.id.button5:
+                gotoActivity(JsonActivity.class);
         }
     }
 

@@ -1,6 +1,7 @@
 package com.example.sd.learningproject;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,11 @@ import com.example.sd.learningproject.viewpager.ViewPagerActivity;
 import com.example.sd.learningproject.viewpager.ViewPagerFragment;
 import com.example.sd.learningproject.webView.WebViewActivity;
 import com.example.sd.learningproject.widget.NormalWidgetActivity;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 

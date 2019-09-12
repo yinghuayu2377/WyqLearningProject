@@ -1,0 +1,71 @@
+[
+  {
+    "code": "001",
+    "name": "顶部",
+    "layout": 1
+  },
+  {
+    "code": "002",
+    "name": "通用",
+    "layout": 1,
+    "modules": [
+      {
+        "code": "ACCOUNTED",
+        "name": "账单汇总",
+        "ctrlMode": 1
+      },
+      {
+        "code": "ELECTRONIC_CASH_DETAIL",
+        "name": "电子收款明细",
+        "ctrlMode": 2
+      },
+      {
+        "code": "SUMMARY",
+        "name": "商品寄存",
+        "ctrlMode": 3
+      },
+      {
+        "code": "PRESELL_MANAGE",
+        "name": "预售",
+        "ctrlMode": 1
+      },
+      {
+        "code": "FOODS_BALANCE",
+        "name": "沽清",
+        "ctrlMode": 1
+      }
+    ]
+  },
+  {
+    "code": "003",
+    "name": "更多",
+    "layout": 2,
+    "modules": [
+      {
+        "code": "MORE_SETTINGS",
+        "name": "账单汇总",
+        "ctrlMode": 1
+      }
+    ]
+  },
+  {
+    "code": "004",
+    "name": "lalala",
+    "layout": 1,
+    "modules": [
+      {
+        "code": "",
+        "name": "",
+        "ctrlMode": 1
+      }
+    ]
+  },
+  {
+    "code": "005",
+    "name": "咚咚咚咚",
+    "layout": 1,
+    "modules": [
+    ]
+  }
+]
+
