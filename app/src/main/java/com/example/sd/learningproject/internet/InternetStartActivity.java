@@ -62,6 +62,7 @@ public class InternetStartActivity extends AppCompatActivity {
 
             case R.id.button5:
                 gotoActivity(JsonActivity.class);
+                break;
         }
     }
 

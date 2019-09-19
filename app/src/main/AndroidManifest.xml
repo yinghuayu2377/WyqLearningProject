@@ -191,6 +191,7 @@
         <activity android:name=".advance.LambdaActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".internet.JsonActivity" />
+        <activity android:name=".Builder.BuilderActivity" />
     </application>
 
 </manifest>
