@@ -9,6 +9,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.sd.learningproject.R;
 import com.example.sd.learningproject.recyclerview.complexrecyclerview.ComplexRecyclerViewActivity;
+import com.example.sd.learningproject.recyclerview.nestrecyclerview.NestRecyclerViewActivity;
 
 public class RecyclerViewStartActivity extends AppCompatActivity {
     @Override
@@ -19,7 +20,7 @@ public class RecyclerViewStartActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.click_button1, R.id.click_button2, R.id.click_button3, R.id.click_button4})
+    @OnClick({R.id.click_button1, R.id.click_button2, R.id.click_button3, R.id.click_button4, R.id.click_button5})
     void click(View view) {
         switch (view.getId()) {
             case R.id.click_button1:
@@ -40,6 +41,11 @@ public class RecyclerViewStartActivity extends AppCompatActivity {
             case R.id.click_button4:
                 Intent intent3 = new Intent(this, ComplexRecyclerViewActivity.class);
                 startActivity(intent3);
+                break;
+
+            case R.id.click_button5:
+                Intent intent4 = new Intent(this, NestRecyclerViewActivity.class);
+                startActivity(intent4);
                 break;
         }
     }
