@@ -193,6 +193,7 @@
         <activity android:name=".internet.JsonActivity" />
         <activity android:name=".Builder.BuilderActivity" />
         <activity android:name=".recyclerview.nestrecyclerview.NestRecyclerViewActivity" />
+        <activity android:name=".recyclerview.RecyclerViewOpenOrClose.RecyclerViewOpenOrCloseActivity" />
     </application>
 
 </manifest>

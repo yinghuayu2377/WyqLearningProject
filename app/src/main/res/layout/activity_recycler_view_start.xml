@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="根据type跳转到不同ViewHolder" />
+        android:text="根据type展示不同ViewHolder" />
 
     <Button
         android:id="@+id/click_button5"
@@ -33,4 +33,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="双层RecyclerView嵌套" />
+
+    <Button
+        android:id="@+id/click_button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="单层RecyclerView实现点击展开、折叠item" />
 </LinearLayout>
